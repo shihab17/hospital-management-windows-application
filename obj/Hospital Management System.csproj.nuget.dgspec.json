@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\AIUB\\Hospital Management System\\Hospital Management System\\Hospital Management System.csproj": {}
+    "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj": {}
   },
   "projects": {
-    "G:\\AIUB\\Hospital Management System\\Hospital Management System\\Hospital Management System.csproj": {
+    "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\AIUB\\Hospital Management System\\Hospital Management System\\Hospital Management System.csproj",
+        "projectUniqueName": "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj",
         "projectName": "Hospital Management System",
-        "projectPath": "G:\\AIUB\\Hospital Management System\\Hospital Management System\\Hospital Management System.csproj",
+        "projectPath": "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "G:\\AIUB\\Hospital Management System\\Hospital Management System\\obj\\",
+        "outputPath": "G:\\AIUB\\HMS\\Hospital Management System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

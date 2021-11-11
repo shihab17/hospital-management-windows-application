@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "YgsgACkWDpn4Mc9Yx9I5ZMBxA4FtMxMCArDcf5KiJnEGvw0gg5/UfZcz5gejULFRzILGJElU98KDnac6ZEjBwg==",
+  "dgSpecHash": "ezNnZYgtcViytO4zFw5f36wPW5wMv1H8OvXprr8y98B5x9Fux1A65rQEnf4fSgsCsCSPs/Sgg4oJbYVn+AC2MQ==",
   "success": true,
-  "projectFilePath": "G:\\AIUB\\Hospital Management System\\Hospital Management System\\Hospital Management System.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
