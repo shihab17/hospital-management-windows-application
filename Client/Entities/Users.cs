@@ -4,23 +4,29 @@ using System.Text;
 
 namespace Hospital_Management_System.Client.Entities
 {
-    class Users
+    public class Users
     {
-        public enum UserType
+        public enum UserTypeEnum
         {
             Admin,
             Doctor,
             Nurse
         };
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public string UserId { get; set; }
         public string Password { get; set; }
+        public int UserType { get; set; }
 
-        public Users(int id, string userName, string password)
+        public Users()
+        {
+        }
+
+        public Users(int id, string userId, string password, int userType)
         {
             Id = id;
-            UserName = userName;
+            UserId = userId;
             Password = password;
+            UserType = userType;
         }
     }
 }

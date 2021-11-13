@@ -13,3 +13,29 @@ G:\AIUB\Hospital Management System\Hospital Management System\obj\Debug\netcorea
 G:\AIUB\Hospital Management System\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.dll
 G:\AIUB\Hospital Management System\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.pdb
 G:\AIUB\Hospital Management System\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.genruntimeconfig.cache
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.exe
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.deps.json
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.runtimeconfig.json
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.runtimeconfig.dev.json
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\Hospital Management System.pdb
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csprojAssemblyReference.cache
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Login.Login.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csproj.GenerateResource.cache
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.AssemblyInfoInputs.cache
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.AssemblyInfo.cs
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csproj.CoreCompileInputs.cache
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csproj.CopyComplete
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.dll
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.pdb
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.genruntimeconfig.cache
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.Admin.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.Doctor.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Properties.Resources.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ManageDoctor.resources
