@@ -12,7 +12,6 @@ namespace Hospital_Management_System.Client.Entities
             Doctor,
             Nurse
         };
-        public int Id { get; set; }
         public string UserId { get; set; }
         public string Password { get; set; }
         public int UserType { get; set; }
@@ -21,9 +20,8 @@ namespace Hospital_Management_System.Client.Entities
         {
         }
 
-        public Users(int id, string userId, string password, int userType)
+        public Users(string userId, string password, int userType)
         {
-            Id = id;
             UserId = userId;
             Password = password;
             UserType = userType;

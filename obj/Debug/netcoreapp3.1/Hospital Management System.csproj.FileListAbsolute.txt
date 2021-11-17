@@ -39,3 +39,5 @@ G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Manageme
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.Doctor.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Properties.Resources.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ManageDoctor.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AddDoctor.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ViewDoctor.resources

@@ -21,10 +21,10 @@ namespace Hospital_Management_System.Client.Forms.Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataAccess dataAccess = new DataAccess();
-            var (id,userId,password,isAccess) = dataAccess.LoginAccess(txtUserId.Text, txtPassword.Text);
+            var (userId,password,isAccess) = dataAccess.LoginAccess(txtUserId.Text, txtPassword.Text);
             if (isAccess>-1)
             {
-                Users user = new Users(id,userId,password,isAccess);
+                Users user = new Users(userId,password,isAccess);
                 switch (isAccess)
                 {
                     case (int)Users.UserTypeEnum.Admin:
