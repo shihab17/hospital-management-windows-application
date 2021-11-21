@@ -37,6 +37,11 @@ namespace Hospital_Management_System.Client.Forms.Login
                         doctor.Show();
                         this.Hide();
                         break;
+                    case (int)Users.UserTypeEnum.Receptionist:
+                        Receptionist.Receptionist receptionist = new Receptionist.Receptionist(this,user);
+                        receptionist.Show();
+                        this.Hide();
+                        break;
                 }
             }
             else

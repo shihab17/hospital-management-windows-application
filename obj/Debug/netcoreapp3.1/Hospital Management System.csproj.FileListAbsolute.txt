@@ -41,3 +41,12 @@ G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Manageme
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ManageDoctor.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AddDoctor.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ViewDoctor.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ManagePatient.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AddPatient.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ViewPatient.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AddNewReceptionist.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ManageReceptionist.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.ViewRecptionist.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Receptionist.Receptionist.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Receptionist.NewAppointment.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Receptionist.ViewAppointment.resources

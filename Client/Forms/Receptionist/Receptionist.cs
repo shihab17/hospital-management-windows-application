@@ -7,23 +7,27 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Hospital_Management_System.Client.Forms.Admin
+namespace Hospital_Management_System.Client.Forms.Receptionist
 {
-    public partial class Admin : Form
+    public partial class Receptionist : Form
     {
         Form previousForm;
         Users user;
-
-        public Admin(Form previousForm, Users user)
+        public Receptionist(Form previousForm, Users user)
         {
             InitializeComponent();
             this.previousForm = previousForm;
             this.user = user;
-            panelEmpoyeSubMenu.Visible = false;
+            panelAppoinment.Visible = false;
+        }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            ControlSubMenu(panelAppoinment); 
         }
         private void ControlSubMenu(Panel panel)
         {
-            if(panel.Visible == true)
+            if (panel.Visible == true)
             {
                 panel.Visible = false;
             }
@@ -31,17 +35,19 @@ namespace Hospital_Management_System.Client.Forms.Admin
             {
                 panel.Visible = true;
             }
-            
+
         }
 
-        private void btnEmploye_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            ControlSubMenu(panelEmpoyeSubMenu);
+            Login.Login login = new Login.Login();
+            login.Show();
+            this.Hide();
         }
 
-        private void btnDoctor_Click(object sender, EventArgs e)
+        private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageDoctor());
+            OpenChildForm(new NewAppointment());
         }
         private Form activeFrom = null;
         private void OpenChildForm(Form childForm)
@@ -51,27 +57,15 @@ namespace Hospital_Management_System.Client.Forms.Admin
             activeFrom = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
-            panelAdminMain.Controls.Add(childForm);
-            panelAdminMain.Tag = childForm;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void btnManagePatient_Click(object sender, EventArgs e)
+        private void btnViewAppoinment_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManagePatient());
-        }
-
-        private void btnReceptionist_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ManageReceptionist());
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            Login.Login login = new Login.Login();
-            login.Show();
-            this.Hide();
+            OpenChildForm(new ViewAppointment());
         }
     }
 }

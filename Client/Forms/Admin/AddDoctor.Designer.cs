@@ -334,13 +334,13 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.clbDoctorSchedeule.FormattingEnabled = true;
             this.clbDoctorSchedeule.Items.AddRange(new object[] {
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"});
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
             this.clbDoctorSchedeule.Location = new System.Drawing.Point(11, 39);
             this.clbDoctorSchedeule.Name = "clbDoctorSchedeule";
             this.clbDoctorSchedeule.Size = new System.Drawing.Size(72, 130);

@@ -20,14 +20,6 @@ namespace Hospital_Management_System.Client.Forms.Admin
         }
         public void DoctorView()
         {
-            //DataAccess dataaccess = new DataAccess();
-            //string query = "Select * FROM tblUser, tblDoctor where tblUser.userId = tblDoctor.userId  ";
-            //SqlCommand commandd = dataaccess.GetCommand(query);
-            //SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //dgvDoctor.DataSource = dt;
             dataAccess.GetAllDoctor(dgvDoctor);
         }
 
@@ -131,9 +123,10 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnDoctorDelete_Click(object sender, EventArgs e)
         {
+            bool isDeleteLogin = dataAccess.DeleteLogin(txtDoctorUserId.Text);
             bool isDeleteUser = dataAccess.DeleteUser(txtDoctorUserId.Text);
             bool isDeleteDoctor = dataAccess.DeleteDoctor(txtDoctorUserId.Text);
-            if (isDeleteUser && isDeleteDoctor)
+            if (isDeleteLogin && isDeleteUser && isDeleteDoctor)
             {
                 MessageBox.Show("User Update Succesfully");
                 DoctorView();

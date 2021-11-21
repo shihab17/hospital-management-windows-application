@@ -10,7 +10,8 @@ namespace Hospital_Management_System.Client.Entities
         {
             Admin,
             Doctor,
-            Nurse
+            Nurse,
+            Receptionist
         };
         public string UserId { get; set; }
         public string Password { get; set; }

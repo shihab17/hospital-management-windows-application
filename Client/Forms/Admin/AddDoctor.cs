@@ -39,7 +39,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            string userId = "Doctor3";
+            string userId = "Doctor2";
             string password = "1234";
             txtDoctorUserId.Text = userId;
             txtDoctorPassword.Text = password;

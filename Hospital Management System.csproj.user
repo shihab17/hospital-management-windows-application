@@ -4,19 +4,46 @@
     <Compile Update="Client\Forms\Admin\AddDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Client\Forms\Admin\AddNewReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Admin\AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Client\Forms\Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Client\Forms\Admin\ManageDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Client\Forms\Admin\ManagePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Admin\ManageReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Client\Forms\Admin\ViewDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Admin\ViewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Admin\ViewRecptionist.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Client\Forms\Doctor\Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Client\Forms\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Receptionist\NewAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Receptionist\Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Receptionist\ViewAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
