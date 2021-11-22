@@ -49,5 +49,48 @@ namespace Hospital_Management_System.Client.Forms.Login
                 MessageBox.Show("Login Failled!");
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtUserId_Validating(object sender, CancelEventArgs e)
+        {
+            var text = (sender as TextBox).Text;
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                e.Cancel = true;
+                txtUserId.Focus();
+                errorProvider1.SetError(txtUserId, $"Should not be white");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUserId, "");
+
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            var text = (sender as TextBox).Text;
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                e.Cancel = true;
+                txtPassword.Focus();
+                errorProvider1.SetError(txtPassword, $"Should not be white");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPassword, "");
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

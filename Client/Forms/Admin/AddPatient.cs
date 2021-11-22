@@ -24,8 +24,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             int patientAge = Int32.Parse(txtPatientAge.Text);
             string gender = (rbMale.Checked) ? "Male" : "Female";
             string doctorId = cbDoctor.SelectedValue.ToString();
+            string date = DateTime.Today.ToString("MM/dd/yyyy");
             MessageBox.Show("Doctor: "+doctorId);
-            bool isIsertPatient = dataAccess.InsertPatient(patientName, patientAge, gender, doctorId);
+            bool isIsertPatient = dataAccess.InsertPatient(patientName, patientAge, gender, doctorId, date);
             if (isIsertPatient)
             {
                 MessageBox.Show("Added New Patient");

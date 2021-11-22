@@ -1,4 +1,5 @@
 ﻿using Hospital_Management_System.Client.Entities;
+using Hospital_Management_System.Client.RandomSample;
 using Hospital_Management_System.Database;
 using Hospital_Management_System.Database.Doctor;
 using System;
@@ -39,8 +40,10 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            string userId = "Doctor2";
-            string password = "1234";
+            RandomGenerator randomGenerator = new RandomGenerator();
+            string randomUser =  randomGenerator.RandomString(5, false);
+            string userId = "Doc" + randomUser;
+            string password = randomGenerator.RandomPassword() ;
             txtDoctorUserId.Text = userId;
             txtDoctorPassword.Text = password;
             int role = (int)Users.UserTypeEnum.Doctor;

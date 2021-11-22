@@ -29,11 +29,15 @@ namespace Hospital_Management_System.Client.Forms.Login
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,13 +55,17 @@ namespace Hospital_Management_System.Client.Forms.Login
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(164, 23);
             this.txtUserId.TabIndex = 1;
+            this.txtUserId.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserId_Validating);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(377, 179);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '.';
             this.txtPassword.Size = new System.Drawing.Size(164, 23);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // label2
             // 
@@ -70,7 +78,7 @@ namespace Hospital_Management_System.Client.Forms.Login
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(377, 250);
+            this.btnLogin.Location = new System.Drawing.Point(319, 245);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(107, 30);
             this.btnLogin.TabIndex = 4;
@@ -78,11 +86,26 @@ namespace Hospital_Management_System.Client.Forms.Login
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(434, 245);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(107, 30);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -90,6 +113,7 @@ namespace Hospital_Management_System.Client.Forms.Login
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +126,7 @@ namespace Hospital_Management_System.Client.Forms.Login
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

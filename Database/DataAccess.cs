@@ -101,10 +101,10 @@ namespace Hospital_Management_System.Database
                 return false;
             }
         }
-        public bool InsertPatient(string name, int age, string gender, string doctorId)
+        public bool InsertPatient(string name, int age, string gender, string doctorId, string date)
         {
             string sql = string.Format("insert into tblPatient(patientName, patientAge, patientGender, doctorId, scheduleDay)" +
-               "Values('{0}', '{1}', '{2}', '{3}', '{4}')", name, age, gender, doctorId, DateTime.Now.ToString("MM/dd/yyyy"));
+               "Values('{0}', '{1}', '{2}', '{3}', '{4}')", name, age, gender, doctorId, date);
             int rowsAffected = ExecuteComand(sql);
             if (rowsAffected > 0)
             {
@@ -130,9 +130,34 @@ namespace Hospital_Management_System.Database
             }
         }
 
+        public bool InsertPrescription(string prescription, string investigation, string patientId)
+        {
+            string sql = string.Format("insert into tblPrescription(prescription, investigation, patientId)" +
+              "Values('{0}', '{1}', '{2}')", prescription, investigation, patientId);
+            int rowsAffected = ExecuteComand(sql);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void GetAllDoctor(DataGridView dataGridView)
         {
             string query = "Select  tblUser.userId, firstName, lastName, gender, email, phoneNumber, specialty, day, time, roomNo, fees, joinDate FROM tblUser, tblDoctor where tblUser.userId = tblDoctor.userId  ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
+        }
+        public void GetPatientByDoctorId(DataGridView dataGridView, string doctorId)
+        {
+            string query = "Select  * FROM tblPatient  where doctorId ='" + doctorId + "' ";
             SqlCommand commandd = GetCommand(query);
             SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
 
@@ -160,7 +185,61 @@ namespace Hospital_Management_System.Database
             sda.Fill(dt);
             dataGridView.DataSource = dt;
         }
+        public void GetPrecriptionByPatient(string patientId, DataGridView dataGridView)
+        {
+            string query = "Select * FROM tblPrescription where patientId ='" + patientId + "' ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
 
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
+        }
+        public Employee GetEmployeeByUserId(string userId)
+        {
+            string query = "Select * FROM tblUser where userId ='" + userId + "' ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            if (dt.Rows.Count > 0)
+            {
+                var empId = dt.Rows[0].Field<string>("userId");
+                var fname = dt.Rows[0].Field<string>("firstName");
+                var lname = dt.Rows[0].Field<string>("lastName");
+                var gender = dt.Rows[0].Field<string>("gender");
+                var email = dt.Rows[0].Field<string>("email");
+                var phoneNumber = dt.Rows[0].Field<string>("phoneNumber");
+                Employee employee = new Employee(empId, fname, lname, gender, email, phoneNumber);
+                return employee;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public Doctors GetDoctorByUserId(string userId)
+        {
+            string query = "Select  * FROM tblDoctor where userId ='" + userId + "' ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            if (dt.Rows.Count > 0)
+            {
+                var doctorId = dt.Rows[0].Field<string>("userId");
+                var speciality = dt.Rows[0].Field<string>("specialty");
+                var scheduleDay = dt.Rows[0].Field<string>("day");
+                var scheduleTime = dt.Rows[0].Field<string>("time");
+                var roomNo = dt.Rows[0].Field<int>("roomNo");
+                var fees = dt.Rows[0].Field<int>("fees");
+                var joinDate = dt.Rows[0].Field<string>("joinDate");
+                Doctors doctors = new Doctors(doctorId, speciality, scheduleDay, scheduleTime, roomNo, fees, joinDate);
+                return doctors;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public string GetDoctorName(string userId)
         {
             string query = "Select  userId, firstName, lastName FROM tblUser where userId ='" + userId + "' ";
@@ -176,6 +255,20 @@ namespace Hospital_Management_System.Database
             else
             {
                 return "";
+            }
+        }
+        public bool IsPrescriptionByPatient(int patientId)
+        {
+            string query = "Select  * FROM tblPrescription where patientId ='" + patientId + "' ";
+            SqlCommand command = GetCommand(query);
+            DataTable dt = Execute(command);
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

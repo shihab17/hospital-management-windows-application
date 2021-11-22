@@ -20,11 +20,12 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
 
         private void btnAddNewPatient_Click(object sender, EventArgs e)
         {
-            string patientName = txtPatientName.Text;
-            int patientAge = Int32.Parse(txtPatientAge.Text);
+            string name = txtPatientName.Text;
+            int age = Int32.Parse(txtPatientAge.Text);
             string gender = (rbMale.Checked) ? "Male" : "Female";
             var doctorId = cbDoctor.SelectedValue.ToString();
-            bool isIsertPatient = dataAccess.InsertPatient(patientName, patientAge, gender, doctorId);
+            var appointmentDate = dtpAppoinment.Value.ToString("MM/dd/yyyy");
+            bool isIsertPatient = dataAccess.InsertPatient(name, age, gender, doctorId, appointmentDate);
             if (isIsertPatient)
             {
                 MessageBox.Show("Added New Doctor Appointment");

@@ -34,6 +34,18 @@
     <Compile Update="Client\Forms\Doctor\Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Client\Forms\Doctor\DoctorProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Doctor\PatientPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Doctor\Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Doctor\ViewPatientFromDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Client\Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
