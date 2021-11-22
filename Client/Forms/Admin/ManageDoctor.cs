@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_System.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,17 @@ namespace Hospital_Management_System.Client.Forms.Admin
 {
     public partial class ManageDoctor : Form
     {
+        DataAccess dataAccess = new DataAccess();
         public ManageDoctor()
         {
             InitializeComponent();
+            int totalSurgeon = dataAccess.GetTotalDeptByDptName("Surgeon");
+            int totalDutyDoctor = dataAccess.GetTotalDeptByDptName("Duty doctor");
+            int totalDentist = dataAccess.GetTotalDeptByDptName("Dentist");
+
+            labelSurgeon.Text = totalSurgeon.ToString();
+            labelDentist.Text = totalDentist.ToString();
+            labelDutyDoctor.Text = totalDutyDoctor.ToString();
         }
 
         private void btnAddDoctor_Click(object sender, EventArgs e)

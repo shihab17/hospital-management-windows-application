@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_System.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
 {
     public partial class ManagePatient : Form
     {
+        DataAccess dataAccess = new DataAccess();
         public ManagePatient()
         {
             InitializeComponent();
+            int toatlPatient = dataAccess.GetTotalPatient();
+            labelTotalPatient.Text = toatlPatient.ToString();
         }
 
         private void btnAddPatient_Click(object sender, EventArgs e)

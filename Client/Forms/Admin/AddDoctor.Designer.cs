@@ -76,10 +76,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelLeft
             // 
+            this.panelLeft.BackColor = System.Drawing.SystemColors.Control;
             this.panelLeft.Controls.Add(this.panelUser);
             this.panelLeft.Controls.Add(this.panelAddEmplyee);
             this.panelLeft.Controls.Add(this.btnNext);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(431, 493);
@@ -87,6 +89,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelUser
             // 
+            this.panelUser.BackColor = System.Drawing.SystemColors.Control;
             this.panelUser.Controls.Add(this.groupBox1);
             this.panelUser.Controls.Add(this.label1);
             this.panelUser.Controls.Add(this.txtDocotorFirstName);
@@ -98,6 +101,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelUser.Controls.Add(this.txtDoctorEmail);
             this.panelUser.Controls.Add(this.label5);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUser.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelUser.Location = new System.Drawing.Point(0, 100);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(431, 224);
@@ -107,18 +111,18 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.groupBox1.Controls.Add(this.rbMale);
             this.groupBox1.Controls.Add(this.rbFemale);
-            this.groupBox1.Location = new System.Drawing.Point(91, 75);
+            this.groupBox1.Location = new System.Drawing.Point(91, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(226, 62);
+            this.groupBox1.Size = new System.Drawing.Size(226, 48);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(0, 31);
+            this.rbMale.Location = new System.Drawing.Point(6, 21);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(51, 19);
+            this.rbMale.Size = new System.Drawing.Size(56, 21);
             this.rbMale.TabIndex = 25;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -127,9 +131,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(135, 31);
+            this.rbFemale.Location = new System.Drawing.Point(129, 21);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(63, 19);
+            this.rbFemale.Size = new System.Drawing.Size(69, 21);
             this.rbFemale.TabIndex = 26;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -140,7 +144,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "First Name";
             // 
@@ -148,7 +152,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDocotorFirstName.Location = new System.Drawing.Point(91, 12);
             this.txtDocotorFirstName.Name = "txtDocotorFirstName";
-            this.txtDocotorFirstName.Size = new System.Drawing.Size(226, 23);
+            this.txtDocotorFirstName.Size = new System.Drawing.Size(226, 25);
             this.txtDocotorFirstName.TabIndex = 17;
             // 
             // label2
@@ -156,7 +160,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 18;
             this.label2.Text = "Last Name";
             // 
@@ -164,14 +168,14 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDoctorLastName.Location = new System.Drawing.Point(91, 58);
             this.txtDoctorLastName.Name = "txtDoctorLastName";
-            this.txtDoctorLastName.Size = new System.Drawing.Size(226, 23);
+            this.txtDoctorLastName.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorLastName.TabIndex = 19;
             // 
             // txtDoctorPhoneNumber
             // 
             this.txtDoctorPhoneNumber.Location = new System.Drawing.Point(91, 188);
             this.txtDoctorPhoneNumber.Name = "txtDoctorPhoneNumber";
-            this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(226, 23);
+            this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorPhoneNumber.TabIndex = 24;
             // 
             // label6
@@ -179,7 +183,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 191);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 15);
+            this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Phone";
             // 
@@ -188,7 +192,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 20;
             this.label4.Text = "Gender";
             // 
@@ -196,7 +200,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDoctorEmail.Location = new System.Drawing.Point(91, 143);
             this.txtDoctorEmail.Name = "txtDoctorEmail";
-            this.txtDoctorEmail.Size = new System.Drawing.Size(226, 23);
+            this.txtDoctorEmail.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorEmail.TabIndex = 22;
             // 
             // label5
@@ -204,18 +208,20 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 15);
+            this.label5.Size = new System.Drawing.Size(41, 17);
             this.label5.TabIndex = 21;
             this.label5.Text = "Email";
             // 
             // panelAddEmplyee
             // 
+            this.panelAddEmplyee.BackColor = System.Drawing.SystemColors.Control;
             this.panelAddEmplyee.Controls.Add(this.btnAddEmployee);
             this.panelAddEmplyee.Controls.Add(this.label3);
             this.panelAddEmplyee.Controls.Add(this.txtDoctorUserId);
             this.panelAddEmplyee.Controls.Add(this.label7);
             this.panelAddEmplyee.Controls.Add(this.txtDoctorPassword);
             this.panelAddEmplyee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAddEmplyee.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelAddEmplyee.Location = new System.Drawing.Point(0, 0);
             this.panelAddEmplyee.Name = "panelAddEmplyee";
             this.panelAddEmplyee.Size = new System.Drawing.Size(431, 100);
@@ -223,12 +229,14 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnAddEmployee
             // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddEmployee.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.btnAddEmployee.Location = new System.Drawing.Point(337, 45);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnAddEmployee.Size = new System.Drawing.Size(75, 37);
             this.btnAddEmployee.TabIndex = 24;
             this.btnAddEmployee.Text = "Add";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // label3
@@ -236,7 +244,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "User Id";
             // 
@@ -244,7 +252,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDoctorUserId.Location = new System.Drawing.Point(91, 17);
             this.txtDoctorUserId.Name = "txtDoctorUserId";
-            this.txtDoctorUserId.Size = new System.Drawing.Size(226, 23);
+            this.txtDoctorUserId.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorUserId.TabIndex = 21;
             // 
             // label7
@@ -252,7 +260,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 66);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 15);
+            this.label7.Size = new System.Drawing.Size(66, 17);
             this.label7.TabIndex = 22;
             this.label7.Text = "Password";
             // 
@@ -260,24 +268,28 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDoctorPassword.Location = new System.Drawing.Point(91, 63);
             this.txtDoctorPassword.Name = "txtDoctorPassword";
-            this.txtDoctorPassword.Size = new System.Drawing.Size(226, 23);
+            this.txtDoctorPassword.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorPassword.TabIndex = 23;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(195, 398);
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btnNext.Location = new System.Drawing.Point(168, 344);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(79, 33);
             this.btnNext.TabIndex = 16;
             this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // panelRight
             // 
+            this.panelRight.BackColor = System.Drawing.SystemColors.Control;
             this.panelRight.Controls.Add(this.btnAddNewDoctor);
             this.panelRight.Controls.Add(this.panelDoctor);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRight.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelRight.Location = new System.Drawing.Point(431, 0);
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(621, 493);
@@ -285,16 +297,19 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnAddNewDoctor
             // 
-            this.btnAddNewDoctor.Location = new System.Drawing.Point(165, 397);
+            this.btnAddNewDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddNewDoctor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.btnAddNewDoctor.Location = new System.Drawing.Point(120, 344);
             this.btnAddNewDoctor.Name = "btnAddNewDoctor";
-            this.btnAddNewDoctor.Size = new System.Drawing.Size(97, 23);
+            this.btnAddNewDoctor.Size = new System.Drawing.Size(115, 33);
             this.btnAddNewDoctor.TabIndex = 3;
             this.btnAddNewDoctor.Text = "Add Doctor";
-            this.btnAddNewDoctor.UseVisualStyleBackColor = true;
+            this.btnAddNewDoctor.UseVisualStyleBackColor = false;
             this.btnAddNewDoctor.Click += new System.EventHandler(this.btnAddNewDoctor_Click);
             // 
             // panelDoctor
             // 
+            this.panelDoctor.BackColor = System.Drawing.SystemColors.Control;
             this.panelDoctor.Controls.Add(this.groupBox2);
             this.panelDoctor.Controls.Add(this.cbDoctorRoom);
             this.panelDoctor.Controls.Add(this.label13);
@@ -317,7 +332,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(86, 46);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(314, 181);
+            this.groupBox2.Size = new System.Drawing.Size(314, 191);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
@@ -326,7 +341,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(162, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 15);
+            this.label11.Size = new System.Drawing.Size(37, 17);
             this.label11.TabIndex = 7;
             this.label11.Text = "Time";
             // 
@@ -343,7 +358,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             "Saturday"});
             this.clbDoctorSchedeule.Location = new System.Drawing.Point(11, 39);
             this.clbDoctorSchedeule.Name = "clbDoctorSchedeule";
-            this.clbDoctorSchedeule.Size = new System.Drawing.Size(72, 130);
+            this.clbDoctorSchedeule.Size = new System.Drawing.Size(100, 124);
             this.clbDoctorSchedeule.TabIndex = 4;
             // 
             // cbDoctorSchedule
@@ -356,7 +371,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             "4 pm - 11 pm"});
             this.cbDoctorSchedule.Location = new System.Drawing.Point(162, 39);
             this.cbDoctorSchedule.Name = "cbDoctorSchedule";
-            this.cbDoctorSchedule.Size = new System.Drawing.Size(121, 23);
+            this.cbDoctorSchedule.Size = new System.Drawing.Size(121, 25);
             this.cbDoctorSchedule.TabIndex = 5;
             // 
             // label10
@@ -364,7 +379,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(11, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 15);
+            this.label10.Size = new System.Drawing.Size(33, 17);
             this.label10.TabIndex = 6;
             this.label10.Text = "Day";
             // 
@@ -382,7 +397,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             "203"});
             this.cbDoctorRoom.Location = new System.Drawing.Point(86, 288);
             this.cbDoctorRoom.Name = "cbDoctorRoom";
-            this.cbDoctorRoom.Size = new System.Drawing.Size(208, 23);
+            this.cbDoctorRoom.Size = new System.Drawing.Size(208, 25);
             this.cbDoctorRoom.TabIndex = 11;
             // 
             // label13
@@ -390,7 +405,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 291);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 15);
+            this.label13.Size = new System.Drawing.Size(65, 17);
             this.label13.TabIndex = 10;
             this.label13.Text = "Room No";
             // 
@@ -398,7 +413,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.txtDocotrFees.Location = new System.Drawing.Point(86, 246);
             this.txtDocotrFees.Name = "txtDocotrFees";
-            this.txtDocotrFees.Size = new System.Drawing.Size(208, 23);
+            this.txtDocotrFees.Size = new System.Drawing.Size(208, 25);
             this.txtDocotrFees.TabIndex = 9;
             // 
             // label12
@@ -406,7 +421,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(7, 250);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 15);
+            this.label12.Size = new System.Drawing.Size(36, 17);
             this.label12.TabIndex = 8;
             this.label12.Text = "Fees";
             // 
@@ -415,7 +430,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 15);
+            this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 1;
             this.label8.Text = "Speciality";
             // 
@@ -424,7 +439,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 66);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
+            this.label9.Size = new System.Drawing.Size(61, 17);
             this.label9.TabIndex = 3;
             this.label9.Text = "Schedule";
             // 
@@ -443,7 +458,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             "Dentist"});
             this.cbDoctorSpeciality.Location = new System.Drawing.Point(86, 17);
             this.cbDoctorSpeciality.Name = "cbDoctorSpeciality";
-            this.cbDoctorSpeciality.Size = new System.Drawing.Size(208, 23);
+            this.cbDoctorSpeciality.Size = new System.Drawing.Size(208, 25);
             this.cbDoctorSpeciality.TabIndex = 0;
             // 
             // AddDoctor

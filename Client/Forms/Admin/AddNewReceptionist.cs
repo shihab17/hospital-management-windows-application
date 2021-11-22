@@ -1,4 +1,5 @@
 ﻿using Hospital_Management_System.Client.Entities;
+using Hospital_Management_System.Client.RandomSample;
 using Hospital_Management_System.Database;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            string userId = "receptionist1";
+            RandomGenerator randomGenerator = new RandomGenerator();
+            string randomUser = randomGenerator.RandomString(5, false);
+            string userId = "rec" + randomUser;
             string password = "1234";
             txtRecetionistUserId.Text = userId;
             txtReceptionistPassword.Text = password;

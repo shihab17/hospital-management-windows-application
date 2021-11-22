@@ -54,3 +54,4 @@ G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Manageme
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.Prescription.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.PatientPrescription.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.DoctorProfile.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AdminDashboard.resources

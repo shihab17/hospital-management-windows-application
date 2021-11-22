@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_System.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
 {
     public partial class ManageReceptionist : Form
     {
+        DataAccess dataAccess = new DataAccess();
         public ManageReceptionist()
         {
             InitializeComponent();
+            int totalReceptionist = dataAccess.GetTotalReceptionist();
+            labelToatlReceptionist.Text = totalReceptionist.ToString();
         }
 
         private void ManageReceptionist_Load(object sender, EventArgs e)

@@ -40,63 +40,72 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.dtpAppoinment = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(209, 107);
+            this.label1.Location = new System.Drawing.Point(204, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.Size = new System.Drawing.Size(53, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
             // txtPatientName
             // 
-            this.txtPatientName.Location = new System.Drawing.Point(303, 99);
+            this.txtPatientName.Location = new System.Drawing.Point(338, 84);
+            this.txtPatientName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.Size = new System.Drawing.Size(173, 23);
+            this.txtPatientName.Size = new System.Drawing.Size(245, 29);
             this.txtPatientName.TabIndex = 1;
             // 
             // txtPatientAge
             // 
-            this.txtPatientAge.Location = new System.Drawing.Point(303, 146);
+            this.txtPatientAge.Location = new System.Drawing.Point(338, 149);
+            this.txtPatientAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPatientAge.Name = "txtPatientAge";
-            this.txtPatientAge.Size = new System.Drawing.Size(173, 23);
+            this.txtPatientAge.Size = new System.Drawing.Size(245, 29);
             this.txtPatientAge.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(209, 154);
+            this.label2.Location = new System.Drawing.Point(204, 161);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 15);
+            this.label2.Size = new System.Drawing.Size(40, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Age";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(209, 237);
+            this.label4.Location = new System.Drawing.Point(204, 277);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 15);
+            this.label4.Size = new System.Drawing.Size(111, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Doctor Name";
             // 
             // cbDoctor
             // 
             this.cbDoctor.FormattingEnabled = true;
-            this.cbDoctor.Location = new System.Drawing.Point(303, 237);
+            this.cbDoctor.Location = new System.Drawing.Point(338, 277);
+            this.cbDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbDoctor.Name = "cbDoctor";
-            this.cbDoctor.Size = new System.Drawing.Size(173, 23);
+            this.cbDoctor.Size = new System.Drawing.Size(245, 29);
             this.cbDoctor.TabIndex = 7;
             // 
             // btnAddNewPatient
             // 
-            this.btnAddNewPatient.Location = new System.Drawing.Point(326, 290);
+            this.btnAddNewPatient.Location = new System.Drawing.Point(371, 351);
+            this.btnAddNewPatient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddNewPatient.Name = "btnAddNewPatient";
-            this.btnAddNewPatient.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNewPatient.Size = new System.Drawing.Size(107, 32);
             this.btnAddNewPatient.TabIndex = 8;
             this.btnAddNewPatient.Text = "Add Patient";
             this.btnAddNewPatient.UseVisualStyleBackColor = true;
@@ -105,9 +114,10 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(209, 197);
+            this.label3.Location = new System.Drawing.Point(204, 221);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(65, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Gender";
             // 
@@ -115,18 +125,21 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.groupBox1.Controls.Add(this.rbMale);
             this.groupBox1.Controls.Add(this.rbFemale);
-            this.groupBox1.Location = new System.Drawing.Point(303, 166);
+            this.groupBox1.Location = new System.Drawing.Point(338, 177);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(173, 62);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(247, 87);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(0, 31);
+            this.rbMale.Location = new System.Drawing.Point(0, 43);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(51, 19);
+            this.rbMale.Size = new System.Drawing.Size(64, 25);
             this.rbMale.TabIndex = 25;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -135,19 +148,41 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(92, 29);
+            this.rbFemale.Location = new System.Drawing.Point(131, 41);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(63, 19);
+            this.rbFemale.Size = new System.Drawing.Size(81, 25);
             this.rbFemale.TabIndex = 26;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
+            // dtpAppoinment
+            // 
+            this.dtpAppoinment.Location = new System.Drawing.Point(338, 34);
+            this.dtpAppoinment.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpAppoinment.Name = "dtpAppoinment";
+            this.dtpAppoinment.Size = new System.Drawing.Size(256, 29);
+            this.dtpAppoinment.TabIndex = 29;
+            this.dtpAppoinment.ValueChanged += new System.EventHandler(this.dtpAppoinment_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(204, 40);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 21);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Date";
+            // 
             // AddPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dtpAppoinment);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAddNewPatient);
             this.Controls.Add(this.cbDoctor);
@@ -157,6 +192,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPatientName);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddPatient";
             this.Text = "AddPatient";
@@ -180,5 +216,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.DateTimePicker dtpAppoinment;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -32,13 +32,13 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelViewPatient = new System.Windows.Forms.Panel();
             this.dgvPatient = new System.Windows.Forms.DataGridView();
             this.panelBottomViewPatient = new System.Windows.Forms.Panel();
+            this.txtPatientId = new System.Windows.Forms.TextBox();
+            this.btnPatientDelete = new System.Windows.Forms.Button();
+            this.btnPatientUpdate = new System.Windows.Forms.Button();
             this.cbDoctorName = new System.Windows.Forms.ComboBox();
             this.txtPatientAge = new System.Windows.Forms.TextBox();
             this.txtPatientName = new System.Windows.Forms.TextBox();
             this.txtPatientDate = new System.Windows.Forms.TextBox();
-            this.btnPatientUpdate = new System.Windows.Forms.Button();
-            this.btnPatientDelete = new System.Windows.Forms.Button();
-            this.txtPatientId = new System.Windows.Forms.TextBox();
             this.panelViewPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.panelBottomViewPatient.SuspendLayout();
@@ -55,11 +55,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // dgvPatient
             // 
+            this.dgvPatient.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPatient.Location = new System.Drawing.Point(0, 35);
+            this.dgvPatient.Location = new System.Drawing.Point(12, 35);
             this.dgvPatient.Name = "dgvPatient";
             this.dgvPatient.RowTemplate.Height = 25;
-            this.dgvPatient.Size = new System.Drawing.Size(800, 150);
+            this.dgvPatient.Size = new System.Drawing.Size(745, 150);
             this.dgvPatient.TabIndex = 0;
             this.dgvPatient.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPatient_CellMouseDoubleClick);
             // 
@@ -77,6 +78,33 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelBottomViewPatient.Name = "panelBottomViewPatient";
             this.panelBottomViewPatient.Size = new System.Drawing.Size(800, 238);
             this.panelBottomViewPatient.TabIndex = 1;
+            // 
+            // txtPatientId
+            // 
+            this.txtPatientId.Location = new System.Drawing.Point(12, 6);
+            this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.Size = new System.Drawing.Size(100, 23);
+            this.txtPatientId.TabIndex = 6;
+            // 
+            // btnPatientDelete
+            // 
+            this.btnPatientDelete.Location = new System.Drawing.Point(206, 116);
+            this.btnPatientDelete.Name = "btnPatientDelete";
+            this.btnPatientDelete.Size = new System.Drawing.Size(76, 37);
+            this.btnPatientDelete.TabIndex = 5;
+            this.btnPatientDelete.Text = "Delete";
+            this.btnPatientDelete.UseVisualStyleBackColor = true;
+            this.btnPatientDelete.Click += new System.EventHandler(this.btnPatientDelete_Click);
+            // 
+            // btnPatientUpdate
+            // 
+            this.btnPatientUpdate.Location = new System.Drawing.Point(73, 117);
+            this.btnPatientUpdate.Name = "btnPatientUpdate";
+            this.btnPatientUpdate.Size = new System.Drawing.Size(95, 36);
+            this.btnPatientUpdate.TabIndex = 4;
+            this.btnPatientUpdate.Text = "Update";
+            this.btnPatientUpdate.UseVisualStyleBackColor = true;
+            this.btnPatientUpdate.Click += new System.EventHandler(this.btnPatientUpdate_Click);
             // 
             // cbDoctorName
             // 
@@ -106,33 +134,6 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtPatientDate.Name = "txtPatientDate";
             this.txtPatientDate.Size = new System.Drawing.Size(156, 23);
             this.txtPatientDate.TabIndex = 0;
-            // 
-            // btnPatientUpdate
-            // 
-            this.btnPatientUpdate.Location = new System.Drawing.Point(73, 117);
-            this.btnPatientUpdate.Name = "btnPatientUpdate";
-            this.btnPatientUpdate.Size = new System.Drawing.Size(95, 36);
-            this.btnPatientUpdate.TabIndex = 4;
-            this.btnPatientUpdate.Text = "Update";
-            this.btnPatientUpdate.UseVisualStyleBackColor = true;
-            this.btnPatientUpdate.Click += new System.EventHandler(this.btnPatientUpdate_Click);
-            // 
-            // btnPatientDelete
-            // 
-            this.btnPatientDelete.Location = new System.Drawing.Point(206, 116);
-            this.btnPatientDelete.Name = "btnPatientDelete";
-            this.btnPatientDelete.Size = new System.Drawing.Size(76, 37);
-            this.btnPatientDelete.TabIndex = 5;
-            this.btnPatientDelete.Text = "Delete";
-            this.btnPatientDelete.UseVisualStyleBackColor = true;
-            this.btnPatientDelete.Click += new System.EventHandler(this.btnPatientDelete_Click);
-            // 
-            // txtPatientId
-            // 
-            this.txtPatientId.Location = new System.Drawing.Point(12, 6);
-            this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.Size = new System.Drawing.Size(100, 23);
-            this.txtPatientId.TabIndex = 6;
             // 
             // ViewPatient
             // 

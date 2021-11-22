@@ -20,6 +20,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.previousForm = previousForm;
             this.user = user;
             panelEmpoyeSubMenu.Visible = false;
+            OpenChildForm(new AdminDashboard());
         }
         private void ControlSubMenu(Panel panel)
         {
@@ -72,6 +73,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
             Login.Login login = new Login.Login();
             login.Show();
             this.Hide();
+        }
+
+        private void btnAdminDashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AdminDashboard());
         }
     }
 }

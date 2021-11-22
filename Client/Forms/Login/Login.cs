@@ -16,6 +16,7 @@ namespace Hospital_Management_System.Client.Forms.Login
         public Login()
         {
             InitializeComponent();
+            pictureBox1.Image = pictureBox1.InitialImage;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -92,5 +93,7 @@ namespace Hospital_Management_System.Client.Forms.Login
         {
             
         }
+
+
     }
 }

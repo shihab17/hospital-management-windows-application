@@ -38,8 +38,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnEmploye = new System.Windows.Forms.Button();
             this.btnAdminDashboard = new System.Windows.Forms.Button();
             this.panelAdminHeader = new System.Windows.Forms.Panel();
-            this.panelAdminMain = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.panelAdminMain = new System.Windows.Forms.Panel();
             this.panelAdminLeft.SuspendLayout();
             this.panelEmpoyeSubMenu.SuspendLayout();
             this.panelAdminHeader.SuspendLayout();
@@ -47,7 +47,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelAdminLeft
             // 
-            this.panelAdminLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelAdminLeft.BackColor = System.Drawing.Color.Teal;
             this.panelAdminLeft.Controls.Add(this.btnManagePatient);
             this.panelAdminLeft.Controls.Add(this.panelEmpoyeSubMenu);
             this.panelAdminLeft.Controls.Add(this.btnEmploye);
@@ -55,19 +55,20 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminLeft.Location = new System.Drawing.Point(0, 47);
             this.panelAdminLeft.Name = "panelAdminLeft";
-            this.panelAdminLeft.Size = new System.Drawing.Size(200, 489);
+            this.panelAdminLeft.Size = new System.Drawing.Size(200, 514);
             this.panelAdminLeft.TabIndex = 0;
             // 
             // btnManagePatient
             // 
             this.btnManagePatient.AllowDrop = true;
-            this.btnManagePatient.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnManagePatient.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnManagePatient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManagePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManagePatient.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnManagePatient.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnManagePatient.Location = new System.Drawing.Point(0, 194);
+            this.btnManagePatient.Location = new System.Drawing.Point(0, 149);
             this.btnManagePatient.Name = "btnManagePatient";
-            this.btnManagePatient.Size = new System.Drawing.Size(200, 30);
+            this.btnManagePatient.Size = new System.Drawing.Size(200, 33);
             this.btnManagePatient.TabIndex = 3;
             this.btnManagePatient.Text = "Manage Patient";
             this.btnManagePatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -76,22 +77,25 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelEmpoyeSubMenu
             // 
+            this.panelEmpoyeSubMenu.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panelEmpoyeSubMenu.Controls.Add(this.button2);
             this.panelEmpoyeSubMenu.Controls.Add(this.btnReceptionist);
             this.panelEmpoyeSubMenu.Controls.Add(this.btnDoctor);
             this.panelEmpoyeSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEmpoyeSubMenu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelEmpoyeSubMenu.Location = new System.Drawing.Point(0, 60);
             this.panelEmpoyeSubMenu.Name = "panelEmpoyeSubMenu";
-            this.panelEmpoyeSubMenu.Size = new System.Drawing.Size(200, 134);
+            this.panelEmpoyeSubMenu.Size = new System.Drawing.Size(200, 89);
             this.panelEmpoyeSubMenu.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 46);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 61);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 23);
+            this.button2.Size = new System.Drawing.Size(200, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "Nurse";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,11 +103,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnReceptionist
             // 
-            this.btnReceptionist.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnReceptionist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnReceptionist.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReceptionist.Location = new System.Drawing.Point(0, 23);
+            this.btnReceptionist.ForeColor = System.Drawing.Color.White;
+            this.btnReceptionist.Location = new System.Drawing.Point(0, 32);
             this.btnReceptionist.Name = "btnReceptionist";
-            this.btnReceptionist.Size = new System.Drawing.Size(200, 23);
+            this.btnReceptionist.Size = new System.Drawing.Size(200, 29);
             this.btnReceptionist.TabIndex = 1;
             this.btnReceptionist.Text = "Receptionist";
             this.btnReceptionist.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,11 +117,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnDoctor
             // 
-            this.btnDoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDoctor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoctor.ForeColor = System.Drawing.Color.White;
             this.btnDoctor.Location = new System.Drawing.Point(0, 0);
             this.btnDoctor.Name = "btnDoctor";
-            this.btnDoctor.Size = new System.Drawing.Size(200, 23);
+            this.btnDoctor.Size = new System.Drawing.Size(200, 32);
             this.btnDoctor.TabIndex = 0;
             this.btnDoctor.Text = "Doctor";
             this.btnDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,9 +132,10 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // btnEmploye
             // 
             this.btnEmploye.AllowDrop = true;
-            this.btnEmploye.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEmploye.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnEmploye.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmploye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmploye.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEmploye.ForeColor = System.Drawing.SystemColors.Window;
             this.btnEmploye.Location = new System.Drawing.Point(0, 30);
             this.btnEmploye.Name = "btnEmploye";
@@ -141,9 +148,10 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnAdminDashboard
             // 
-            this.btnAdminDashboard.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAdminDashboard.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnAdminDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdminDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminDashboard.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdminDashboard.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAdminDashboard.Location = new System.Drawing.Point(0, 0);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
@@ -152,16 +160,31 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnAdminDashboard.Text = "Dashboard";
             this.btnAdminDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdminDashboard.UseVisualStyleBackColor = false;
+            this.btnAdminDashboard.Click += new System.EventHandler(this.btnAdminDashboard_Click);
             // 
             // panelAdminHeader
             // 
-            this.panelAdminHeader.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelAdminHeader.BackColor = System.Drawing.Color.Teal;
             this.panelAdminHeader.Controls.Add(this.btnLogout);
             this.panelAdminHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdminHeader.Location = new System.Drawing.Point(0, 0);
             this.panelAdminHeader.Name = "panelAdminHeader";
-            this.panelAdminHeader.Size = new System.Drawing.Size(923, 47);
+            this.panelAdminHeader.Size = new System.Drawing.Size(984, 47);
             this.panelAdminHeader.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogout.Location = new System.Drawing.Point(894, 0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(90, 47);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelAdminMain
             // 
@@ -169,25 +192,14 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminMain.ImeMode = System.Windows.Forms.ImeMode.On;
             this.panelAdminMain.Location = new System.Drawing.Point(200, 47);
             this.panelAdminMain.Name = "panelAdminMain";
-            this.panelAdminMain.Size = new System.Drawing.Size(723, 489);
+            this.panelAdminMain.Size = new System.Drawing.Size(784, 514);
             this.panelAdminMain.TabIndex = 2;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogout.Location = new System.Drawing.Point(848, 0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 47);
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 536);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelAdminMain);
             this.Controls.Add(this.panelAdminLeft);
             this.Controls.Add(this.panelAdminHeader);

@@ -1,7 +1,6 @@
 ﻿using Hospital_Management_System.Client.Entities;
 using Hospital_Management_System.Client.RandomSample;
 using Hospital_Management_System.Database;
-using Hospital_Management_System.Database.Doctor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +15,6 @@ namespace Hospital_Management_System.Client.Forms.Admin
     public partial class AddDoctor : Form
     {
         DataAccess dataAccess = new DataAccess();
-        DbDoctor dbDoctor = new DbDoctor();
         public AddDoctor()
         {
             InitializeComponent();
@@ -43,7 +41,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             RandomGenerator randomGenerator = new RandomGenerator();
             string randomUser =  randomGenerator.RandomString(5, false);
             string userId = "Doc" + randomUser;
-            string password = randomGenerator.RandomPassword() ;
+            //string password = randomGenerator.RandomPassword() ;
+            string password = "1234";
             txtDoctorUserId.Text = userId;
             txtDoctorPassword.Text = password;
             int role = (int)Users.UserTypeEnum.Doctor;

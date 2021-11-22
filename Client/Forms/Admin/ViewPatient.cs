@@ -17,10 +17,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             InitializeComponent();
             dataAccess.GetAllPatient(dgvPatient);
             dataAccess.GetDoctorCombo(cbDoctorName);
+            panelBottomViewPatient.Visible = false;
         }
 
         private void dgvPatient_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            panelBottomViewPatient.Visible = true;
             string patientId = dgvPatient.SelectedRows[0].Cells[0].Value.ToString();
             string patientName = dgvPatient.SelectedRows[0].Cells[1].Value.ToString();
             string patientAge = dgvPatient.SelectedRows[0].Cells[2].Value.ToString();
@@ -32,6 +34,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             txtPatientAge.Text = patientAge;
             txtPatientDate.Text = date;
             cbDoctorName.SelectedValue = doctorName;
+
         }
 
         private void btnPatientUpdate_Click(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             {
                 MessageBox.Show("Patient Update Succesfully");
                 dataAccess.GetAllPatient(dgvPatient);
+                panelBottomViewPatient.Visible = false;
             }
             else
             {
@@ -61,8 +65,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             if (isDeletePatient)
             {
                 MessageBox.Show("Delete PAtient Succesfully");
-
                 dataAccess.GetAllPatient(dgvPatient);
+                panelBottomViewPatient.Visible = false;
             }
             else
             {

@@ -240,6 +240,45 @@ namespace Hospital_Management_System.Database
                 return null;
             }
         }
+        public int GetTotalDoctor()
+        {
+            string query = "Select  * FROM tblDoctor ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            return dt.Rows.Count;
+        }
+        public int GetTotalPatient()
+        {
+            string query = "Select  * FROM tblPatient ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            return dt.Rows.Count;
+        }
+        public int GetTotalEmployee()
+        {
+            string query = "Select  * FROM tblUser ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            return dt.Rows.Count;
+        }
+        public int GetTotalDeptByDptName(string deptName)
+        {
+            string query = "Select  * FROM tblDoctor where specialty ='" + deptName + "' ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            return dt.Rows.Count;
+        }
+        public int GetTotalReceptionist( )
+        {
+            string query = "Select  * FROM tblReceptionist ";
+            SqlCommand command = GetCommand(query);
+            DataTable dt = Execute(command);
+            return dt.Rows.Count;
+        }
         public string GetDoctorName(string userId)
         {
             string query = "Select  userId, firstName, lastName FROM tblUser where userId ='" + userId + "' ";
@@ -257,6 +296,7 @@ namespace Hospital_Management_System.Database
                 return "";
             }
         }
+
         public bool IsPrescriptionByPatient(int patientId)
         {
             string query = "Select  * FROM tblPrescription where patientId ='" + patientId + "' ";

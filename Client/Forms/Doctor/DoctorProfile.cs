@@ -30,6 +30,14 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             labelSpeciality.Text = doctors.Specialty;
             labelSchedeule.Text = doctors.ScheduleDay + " (" + doctors.ScheduleTime + ")";
             labelJoinDate.Text = doctors.JoinDate;
+            labeluserId.Text = doctors.DoctorId;
+            labelRoomNumber.Text = doctors.RoomNo.ToString();
+            labelFees.Text = doctors.Fees.ToString();
+
+            labelDoctorFullName.Text = employee.FirstName + " " + employee.LastName;
+            labelDoctorGender.Text = employee.Gender;
+            labelDoctorEmail.Text = employee.Email;
+            labelDoctorPhoneNumber.Text = employee.PhoneNumber;
         }
     }
 }

@@ -21,12 +21,14 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public void DoctorView()
         {
             dataAccess.GetAllDoctor(dgvDoctor);
+            panelData.Visible = false;
         }
 
         private void dgvDoctor_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtDoctorUserId.Enabled = false;
             txtDoctorJoinDate.Enabled = false;
+            panelData.Visible = true;
             var userId = dgvDoctor.SelectedRows[0].Cells[0].Value.ToString();
             var firstName = dgvDoctor.SelectedRows[0].Cells[1].Value.ToString();
             var lastName = dgvDoctor.SelectedRows[0].Cells[2].Value.ToString();
@@ -92,7 +94,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             bool isDoctorUpdate = dataAccess.UpdateDoctor(userId, speciality.ToString(), docotorDay, docotorTime.ToString(), roomNo, fees);
             if (isUpdate && isDoctorUpdate)
             {
-                MessageBox.Show("User Update Succesfully");
+                MessageBox.Show("Update Succesfully");
                 DoctorView();
             }
             else

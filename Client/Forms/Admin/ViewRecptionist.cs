@@ -18,6 +18,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             dataAccess.GetAllReceptionist(dgvRecptionist);
             btnReceptionistDelete.Enabled = false;
             btnReceptionistUpdate.Enabled = false;
+            panelRecptionistViewData.Visible = false;
         }
 
         private void dgvRecptionist_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -26,6 +27,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             txtRecetionistJoinDate.Enabled = false;
             btnReceptionistDelete.Enabled = true;
             btnReceptionistUpdate.Enabled = true;
+            panelRecptionistViewData.Visible = true;
             var userId = dgvRecptionist.SelectedRows[0].Cells[0].Value.ToString();
             var firstName = dgvRecptionist.SelectedRows[0].Cells[1].Value.ToString();
             var lastName = dgvRecptionist.SelectedRows[0].Cells[2].Value.ToString();
@@ -68,9 +70,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
             bool isReceptionistUpdate = dataAccess.UpdateReceptionist(userId, dutyTime.ToString(), salary.ToString());
             if (isUpdate && isReceptionistUpdate)
             {
-                MessageBox.Show("User Update Succesfully");
+                MessageBox.Show("Update Succesfully");
 
                 dataAccess.GetAllReceptionist(dgvRecptionist);
+
+                panelRecptionistViewData.Visible = false;
             }
             else
             {
