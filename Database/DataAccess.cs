@@ -155,7 +155,17 @@ namespace Hospital_Management_System.Database
             sda.Fill(dt);
             dataGridView.DataSource = dt;
         }
-        public void GetPatientByDoctorId(DataGridView dataGridView, string doctorId)
+        public void GetPatientByDoctorId(DataGridView dataGridView, string doctorId, string dateTime)
+        {
+            string query = "Select  * FROM tblPatient  where doctorId ='" + doctorId + "' and scheduleDay ='" + dateTime + "' ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
+        }
+        public void GetAllPatientByDoctorId(DataGridView dataGridView, string doctorId)
         {
             string query = "Select  * FROM tblPatient  where doctorId ='" + doctorId + "' ";
             SqlCommand commandd = GetCommand(query);
@@ -175,6 +185,7 @@ namespace Hospital_Management_System.Database
             sda.Fill(dt);
             dataGridView.DataSource = dt;
         }
+      
         public void GetAllReceptionist(DataGridView dataGridView)
         {
             string query = "Select  tblUser.userId, firstName, lastName, gender, email, phoneNumber, dutyTime, salary, joinDate FROM tblUser, tblReceptionist where tblUser.userId = tblReceptionist.userId  ";
@@ -351,9 +362,9 @@ namespace Hospital_Management_System.Database
                 return false;
             }
         }
-        public bool UpdatePatient(int patientId, string name, int age, string doctorName)
+        public bool UpdatePatient(int patientId, string name, int age, string gender, string doctorName)
         {
-            string query = "UPDATE tblPatient SET patientName= '" + name + "', patientAge= '" + age + "', doctorId= '" + doctorName + "' WHERE patientId ='" + patientId + "' ";
+            string query = "UPDATE tblPatient SET patientName= '" + name + "', patientAge= '" + age + "', patientGender= '" + gender + "', doctorId= '" + doctorName + "' WHERE patientId ='" + patientId + "' ";
             int rowsAffected = ExecuteComand(query);
             if (rowsAffected > 0)
             {

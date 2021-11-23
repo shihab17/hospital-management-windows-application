@@ -67,5 +67,10 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
         {
             OpenChildForm(new ViewAppointment());
         }
+
+        private void btnDoctorView_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewAllDoctor());
+        }
     }
 }

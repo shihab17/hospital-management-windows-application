@@ -26,6 +26,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             labelPatientName.Text = patient.patientName;
             labelAge.Text = patient.patientAge.ToString();
             labelGender.Text = patient.patientGender;
+            labelDate.Text = patient.appointmentDate;
         }
 
         private void btnAddMedicine_Click(object sender, EventArgs e)

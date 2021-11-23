@@ -32,6 +32,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelViewPatient = new System.Windows.Forms.Panel();
             this.dgvPatient = new System.Windows.Forms.DataGridView();
             this.panelBottomViewPatient = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
             this.txtPatientId = new System.Windows.Forms.TextBox();
             this.btnPatientDelete = new System.Windows.Forms.Button();
             this.btnPatientUpdate = new System.Windows.Forms.Button();
@@ -42,6 +45,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelViewPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.panelBottomViewPatient.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelViewPatient
@@ -66,6 +70,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelBottomViewPatient
             // 
+            this.panelBottomViewPatient.Controls.Add(this.groupBox1);
             this.panelBottomViewPatient.Controls.Add(this.txtPatientId);
             this.panelBottomViewPatient.Controls.Add(this.btnPatientDelete);
             this.panelBottomViewPatient.Controls.Add(this.btnPatientUpdate);
@@ -74,23 +79,56 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelBottomViewPatient.Controls.Add(this.txtPatientName);
             this.panelBottomViewPatient.Controls.Add(this.txtPatientDate);
             this.panelBottomViewPatient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBottomViewPatient.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelBottomViewPatient.Location = new System.Drawing.Point(0, 213);
             this.panelBottomViewPatient.Name = "panelBottomViewPatient";
             this.panelBottomViewPatient.Size = new System.Drawing.Size(800, 238);
             this.panelBottomViewPatient.TabIndex = 1;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbFemale);
+            this.groupBox1.Controls.Add(this.rbMale);
+            this.groupBox1.Location = new System.Drawing.Point(378, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(180, 42);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbFemale
+            // 
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(100, 13);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(81, 25);
+            this.rbFemale.TabIndex = 1;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(6, 13);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(64, 25);
+            this.rbMale.TabIndex = 0;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            // 
             // txtPatientId
             // 
             this.txtPatientId.Location = new System.Drawing.Point(12, 6);
             this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.Size = new System.Drawing.Size(100, 23);
+            this.txtPatientId.Size = new System.Drawing.Size(100, 29);
             this.txtPatientId.TabIndex = 6;
             // 
             // btnPatientDelete
             // 
-            this.btnPatientDelete.Location = new System.Drawing.Point(206, 116);
+            this.btnPatientDelete.Location = new System.Drawing.Point(206, 148);
             this.btnPatientDelete.Name = "btnPatientDelete";
-            this.btnPatientDelete.Size = new System.Drawing.Size(76, 37);
+            this.btnPatientDelete.Size = new System.Drawing.Size(95, 37);
             this.btnPatientDelete.TabIndex = 5;
             this.btnPatientDelete.Text = "Delete";
             this.btnPatientDelete.UseVisualStyleBackColor = true;
@@ -98,7 +136,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // btnPatientUpdate
             // 
-            this.btnPatientUpdate.Location = new System.Drawing.Point(73, 117);
+            this.btnPatientUpdate.Location = new System.Drawing.Point(73, 148);
             this.btnPatientUpdate.Name = "btnPatientUpdate";
             this.btnPatientUpdate.Size = new System.Drawing.Size(95, 36);
             this.btnPatientUpdate.TabIndex = 4;
@@ -109,30 +147,30 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // cbDoctorName
             // 
             this.cbDoctorName.FormattingEnabled = true;
-            this.cbDoctorName.Location = new System.Drawing.Point(615, 36);
+            this.cbDoctorName.Location = new System.Drawing.Point(206, 91);
             this.cbDoctorName.Name = "cbDoctorName";
-            this.cbDoctorName.Size = new System.Drawing.Size(142, 23);
+            this.cbDoctorName.Size = new System.Drawing.Size(142, 29);
             this.cbDoctorName.TabIndex = 3;
             // 
             // txtPatientAge
             // 
-            this.txtPatientAge.Location = new System.Drawing.Point(398, 37);
+            this.txtPatientAge.Location = new System.Drawing.Point(12, 91);
             this.txtPatientAge.Name = "txtPatientAge";
-            this.txtPatientAge.Size = new System.Drawing.Size(156, 23);
+            this.txtPatientAge.Size = new System.Drawing.Size(156, 29);
             this.txtPatientAge.TabIndex = 2;
             // 
             // txtPatientName
             // 
             this.txtPatientName.Location = new System.Drawing.Point(206, 37);
             this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.Size = new System.Drawing.Size(156, 23);
+            this.txtPatientName.Size = new System.Drawing.Size(156, 29);
             this.txtPatientName.TabIndex = 1;
             // 
             // txtPatientDate
             // 
             this.txtPatientDate.Location = new System.Drawing.Point(12, 37);
             this.txtPatientDate.Name = "txtPatientDate";
-            this.txtPatientDate.Size = new System.Drawing.Size(156, 23);
+            this.txtPatientDate.Size = new System.Drawing.Size(156, 29);
             this.txtPatientDate.TabIndex = 0;
             // 
             // ViewPatient
@@ -149,6 +187,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).EndInit();
             this.panelBottomViewPatient.ResumeLayout(false);
             this.panelBottomViewPatient.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +205,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private System.Windows.Forms.Button btnPatientDelete;
         private System.Windows.Forms.Button btnPatientUpdate;
         private System.Windows.Forms.TextBox txtPatientId;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.RadioButton rbMale;
     }
 }

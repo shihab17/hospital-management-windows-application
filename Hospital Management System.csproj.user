@@ -46,6 +46,9 @@
     <Compile Update="Client\Forms\Doctor\Prescription.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Client\Forms\Doctor\ViewDoctorAllPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Client\Forms\Doctor\ViewPatientFromDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +59,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Client\Forms\Receptionist\Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Client\Forms\Receptionist\ViewAllDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Client\Forms\Receptionist\ViewAppointment.cs">

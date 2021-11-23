@@ -53,9 +53,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminLeft.Controls.Add(this.btnEmploye);
             this.panelAdminLeft.Controls.Add(this.btnAdminDashboard);
             this.panelAdminLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAdminLeft.Location = new System.Drawing.Point(0, 47);
+            this.panelAdminLeft.Location = new System.Drawing.Point(0, 50);
             this.panelAdminLeft.Name = "panelAdminLeft";
-            this.panelAdminLeft.Size = new System.Drawing.Size(200, 514);
+            this.panelAdminLeft.Size = new System.Drawing.Size(200, 511);
             this.panelAdminLeft.TabIndex = 0;
             // 
             // btnManagePatient
@@ -169,7 +169,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdminHeader.Location = new System.Drawing.Point(0, 0);
             this.panelAdminHeader.Name = "panelAdminHeader";
-            this.panelAdminHeader.Size = new System.Drawing.Size(984, 47);
+            this.panelAdminHeader.Size = new System.Drawing.Size(984, 50);
             this.panelAdminHeader.TabIndex = 1;
             // 
             // btnLogout
@@ -180,7 +180,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnLogout.Location = new System.Drawing.Point(894, 0);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(90, 47);
+            this.btnLogout.Size = new System.Drawing.Size(90, 50);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -190,9 +190,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             this.panelAdminMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdminMain.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.panelAdminMain.Location = new System.Drawing.Point(200, 47);
+            this.panelAdminMain.Location = new System.Drawing.Point(200, 50);
             this.panelAdminMain.Name = "panelAdminMain";
-            this.panelAdminMain.Size = new System.Drawing.Size(784, 514);
+            this.panelAdminMain.Size = new System.Drawing.Size(784, 511);
             this.panelAdminMain.TabIndex = 2;
             // 
             // Admin

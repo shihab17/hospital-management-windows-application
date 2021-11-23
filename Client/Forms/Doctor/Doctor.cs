@@ -50,5 +50,10 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         {
             OpenChildForm(new DoctorProfile(user.UserId));
         }
+
+        private void btnViewAllPatient_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewDoctorAllPatient(user));
+        }
     }
 }

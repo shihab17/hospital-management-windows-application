@@ -22,7 +22,9 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         }
         private void ViewData()
         {
-            dataAccess.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId);
+            var dateTmime = dateTimePicker1.Value.ToString("MM/dd/yyyy");
+            dataAccess.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId,dateTmime);
+            panelDoctorPAtientData.Visible = false;
             //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             //dgvDoctorsPatient.Columns.Add(btn);
             //btn.HeaderText = "Action";
@@ -50,6 +52,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             txtAppointmentId.Enabled = false;
             txtAppointmentDate.Enabled = false;
             groupBox1.Enabled = false;
+            panelDoctorPAtientData.Visible = true;
             var patientId = dgvDoctorsPatient.SelectedRows[0].Cells[0].Value.ToString();
             var name = dgvDoctorsPatient.SelectedRows[0].Cells[1].Value.ToString();
             var age = dgvDoctorsPatient.SelectedRows[0].Cells[2].Value.ToString();
@@ -94,6 +97,13 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             Patient patient = new Patient(txtAppointmentId.Text, txtName.Text, Int32.Parse(txtAge.Text), gender, txtAppointmentDate.Text); ;
             PatientPrescription patientPrescription = new PatientPrescription(patient);
             patientPrescription.Show(); 
-        } 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            var dateTmime = dateTimePicker1.Value.ToString("MM/dd/yyyy");
+            dataAccess.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId, dateTmime);
+            panelDoctorPAtientData.Visible = false;
+        }
     }
 }

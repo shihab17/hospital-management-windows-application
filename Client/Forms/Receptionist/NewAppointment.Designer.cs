@@ -46,86 +46,87 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // 
             // btnAddNewPatient
             // 
-            this.btnAddNewPatient.Location = new System.Drawing.Point(492, 265);
-            this.btnAddNewPatient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddNewPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddNewPatient.Location = new System.Drawing.Point(547, 293);
+            this.btnAddNewPatient.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNewPatient.Name = "btnAddNewPatient";
-            this.btnAddNewPatient.Size = new System.Drawing.Size(145, 70);
+            this.btnAddNewPatient.Size = new System.Drawing.Size(161, 77);
             this.btnAddNewPatient.TabIndex = 17;
             this.btnAddNewPatient.Text = "Add Appoinment";
-            this.btnAddNewPatient.UseVisualStyleBackColor = true;
+            this.btnAddNewPatient.UseVisualStyleBackColor = false;
             this.btnAddNewPatient.Click += new System.EventHandler(this.btnAddNewPatient_Click);
             // 
             // cbDoctor
             // 
             this.cbDoctor.FormattingEnabled = true;
-            this.cbDoctor.Location = new System.Drawing.Point(165, 432);
-            this.cbDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbDoctor.Location = new System.Drawing.Point(183, 477);
+            this.cbDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.cbDoctor.Name = "cbDoctor";
-            this.cbDoctor.Size = new System.Drawing.Size(256, 27);
+            this.cbDoctor.Size = new System.Drawing.Size(284, 29);
             this.cbDoctor.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 396);
+            this.label4.Location = new System.Drawing.Point(183, 438);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 19);
+            this.label4.Size = new System.Drawing.Size(111, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "Doctor Name";
             // 
             // txtPatientAge
             // 
-            this.txtPatientAge.Location = new System.Drawing.Point(165, 265);
-            this.txtPatientAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPatientAge.Location = new System.Drawing.Point(183, 293);
+            this.txtPatientAge.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatientAge.Name = "txtPatientAge";
-            this.txtPatientAge.Size = new System.Drawing.Size(256, 26);
+            this.txtPatientAge.Size = new System.Drawing.Size(284, 29);
             this.txtPatientAge.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 227);
+            this.label2.Location = new System.Drawing.Point(183, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 19);
+            this.label2.Size = new System.Drawing.Size(40, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Age";
             // 
             // txtPatientName
             // 
-            this.txtPatientName.Location = new System.Drawing.Point(165, 184);
-            this.txtPatientName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPatientName.Location = new System.Drawing.Point(183, 203);
+            this.txtPatientName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.Size = new System.Drawing.Size(256, 26);
+            this.txtPatientName.Size = new System.Drawing.Size(284, 29);
             this.txtPatientName.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(165, 149);
+            this.label1.Location = new System.Drawing.Point(183, 165);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 19);
+            this.label1.Size = new System.Drawing.Size(53, 21);
             this.label1.TabIndex = 9;
             this.label1.Text = "Name";
             // 
             // dtpAppoinment
             // 
-            this.dtpAppoinment.Location = new System.Drawing.Point(165, 99);
-            this.dtpAppoinment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpAppoinment.Location = new System.Drawing.Point(183, 109);
+            this.dtpAppoinment.Margin = new System.Windows.Forms.Padding(4);
             this.dtpAppoinment.Name = "dtpAppoinment";
-            this.dtpAppoinment.Size = new System.Drawing.Size(256, 26);
+            this.dtpAppoinment.Size = new System.Drawing.Size(284, 29);
             this.dtpAppoinment.TabIndex = 18;
             this.dtpAppoinment.ValueChanged += new System.EventHandler(this.dtpAppoinment_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(165, 62);
+            this.label5.Location = new System.Drawing.Point(183, 69);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 19);
+            this.label5.Size = new System.Drawing.Size(44, 21);
             this.label5.TabIndex = 19;
             this.label5.Text = "Date";
             // 
@@ -133,11 +134,11 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // 
             this.groupBox1.Controls.Add(this.rbFemale);
             this.groupBox1.Controls.Add(this.rbMale);
-            this.groupBox1.Location = new System.Drawing.Point(165, 320);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(183, 354);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(257, 52);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(286, 57);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gender";
@@ -145,10 +146,10 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(129, 16);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFemale.Location = new System.Drawing.Point(143, 18);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(71, 23);
+            this.rbFemale.Size = new System.Drawing.Size(81, 25);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -157,10 +158,10 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(9, 16);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMale.Location = new System.Drawing.Point(10, 18);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(58, 23);
+            this.rbMale.Size = new System.Drawing.Size(64, 25);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -168,9 +169,9 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // 
             // NewAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 510);
+            this.ClientSize = new System.Drawing.Size(865, 560);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpAppoinment);
@@ -181,7 +182,7 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPatientName);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NewAppointment";
             this.Text = "NewAppointment";

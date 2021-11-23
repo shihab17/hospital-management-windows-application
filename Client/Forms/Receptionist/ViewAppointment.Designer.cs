@@ -30,8 +30,11 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
         private void InitializeComponent()
         {
             this.panelAppointmentView = new System.Windows.Forms.Panel();
-            this.panelAppointmentData = new System.Windows.Forms.Panel();
             this.dgvAppointment = new System.Windows.Forms.DataGridView();
+            this.panelAppointmentData = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
             this.txtAppointmentId = new System.Windows.Forms.TextBox();
             this.btnAppointmentDelete = new System.Windows.Forms.Button();
             this.btnAppointmentUpdate = new System.Windows.Forms.Button();
@@ -39,12 +42,9 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAppointmentDate = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbMale = new System.Windows.Forms.RadioButton();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
             this.panelAppointmentView.SuspendLayout();
-            this.panelAppointmentData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).BeginInit();
+            this.panelAppointmentData.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +53,22 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             this.panelAppointmentView.Controls.Add(this.dgvAppointment);
             this.panelAppointmentView.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAppointmentView.Location = new System.Drawing.Point(0, 0);
+            this.panelAppointmentView.Margin = new System.Windows.Forms.Padding(4);
             this.panelAppointmentView.Name = "panelAppointmentView";
-            this.panelAppointmentView.Size = new System.Drawing.Size(800, 207);
+            this.panelAppointmentView.Size = new System.Drawing.Size(1024, 290);
             this.panelAppointmentView.TabIndex = 0;
+            // 
+            // dgvAppointment
+            // 
+            this.dgvAppointment.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvAppointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointment.Location = new System.Drawing.Point(17, 49);
+            this.dgvAppointment.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAppointment.Name = "dgvAppointment";
+            this.dgvAppointment.RowTemplate.Height = 25;
+            this.dgvAppointment.Size = new System.Drawing.Size(972, 210);
+            this.dgvAppointment.TabIndex = 0;
+            this.dgvAppointment.DoubleClick += new System.EventHandler(this.dgvAppointment_DoubleClick);
             // 
             // panelAppointmentData
             // 
@@ -68,90 +81,32 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             this.panelAppointmentData.Controls.Add(this.txtName);
             this.panelAppointmentData.Controls.Add(this.txtAppointmentDate);
             this.panelAppointmentData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAppointmentData.Location = new System.Drawing.Point(0, 207);
+            this.panelAppointmentData.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panelAppointmentData.Location = new System.Drawing.Point(0, 290);
+            this.panelAppointmentData.Margin = new System.Windows.Forms.Padding(4);
             this.panelAppointmentData.Name = "panelAppointmentData";
-            this.panelAppointmentData.Size = new System.Drawing.Size(800, 218);
+            this.panelAppointmentData.Size = new System.Drawing.Size(1024, 305);
             this.panelAppointmentData.TabIndex = 1;
-            // 
-            // dgvAppointment
-            // 
-            this.dgvAppointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointment.Location = new System.Drawing.Point(12, 35);
-            this.dgvAppointment.Name = "dgvAppointment";
-            this.dgvAppointment.RowTemplate.Height = 25;
-            this.dgvAppointment.Size = new System.Drawing.Size(762, 150);
-            this.dgvAppointment.TabIndex = 0;
-            // 
-            // txtAppointmentId
-            // 
-            this.txtAppointmentId.Location = new System.Drawing.Point(12, 41);
-            this.txtAppointmentId.Name = "txtAppointmentId";
-            this.txtAppointmentId.Size = new System.Drawing.Size(156, 23);
-            this.txtAppointmentId.TabIndex = 13;
-            // 
-            // btnAppointmentDelete
-            // 
-            this.btnAppointmentDelete.Location = new System.Drawing.Point(616, 100);
-            this.btnAppointmentDelete.Name = "btnAppointmentDelete";
-            this.btnAppointmentDelete.Size = new System.Drawing.Size(76, 37);
-            this.btnAppointmentDelete.TabIndex = 12;
-            this.btnAppointmentDelete.Text = "Delete";
-            this.btnAppointmentDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnAppointmentUpdate
-            // 
-            this.btnAppointmentUpdate.Location = new System.Drawing.Point(616, 41);
-            this.btnAppointmentUpdate.Name = "btnAppointmentUpdate";
-            this.btnAppointmentUpdate.Size = new System.Drawing.Size(95, 36);
-            this.btnAppointmentUpdate.TabIndex = 11;
-            this.btnAppointmentUpdate.Text = "Update";
-            this.btnAppointmentUpdate.UseVisualStyleBackColor = true;
-            // 
-            // cbDoctorName
-            // 
-            this.cbDoctorName.FormattingEnabled = true;
-            this.cbDoctorName.Location = new System.Drawing.Point(404, 100);
-            this.cbDoctorName.Name = "cbDoctorName";
-            this.cbDoctorName.Size = new System.Drawing.Size(156, 23);
-            this.cbDoctorName.TabIndex = 10;
-            // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(12, 100);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(156, 23);
-            this.txtAge.TabIndex = 9;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(404, 41);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(156, 23);
-            this.txtName.TabIndex = 8;
-            // 
-            // txtAppointmentDate
-            // 
-            this.txtAppointmentDate.Location = new System.Drawing.Point(207, 41);
-            this.txtAppointmentDate.Name = "txtAppointmentDate";
-            this.txtAppointmentDate.Size = new System.Drawing.Size(156, 23);
-            this.txtAppointmentDate.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbMale);
             this.groupBox1.Controls.Add(this.rbFemale);
-            this.groupBox1.Location = new System.Drawing.Point(207, 73);
+            this.groupBox1.Location = new System.Drawing.Point(296, 102);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(156, 62);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(223, 87);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(0, 31);
+            this.rbMale.Location = new System.Drawing.Point(0, 43);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(51, 19);
+            this.rbMale.Size = new System.Drawing.Size(56, 21);
             this.rbMale.TabIndex = 25;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -160,28 +115,97 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(87, 31);
+            this.rbFemale.Location = new System.Drawing.Point(124, 43);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(63, 19);
+            this.rbFemale.Size = new System.Drawing.Size(69, 21);
             this.rbFemale.TabIndex = 26;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
+            // txtAppointmentId
+            // 
+            this.txtAppointmentId.Location = new System.Drawing.Point(17, 57);
+            this.txtAppointmentId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAppointmentId.Name = "txtAppointmentId";
+            this.txtAppointmentId.Size = new System.Drawing.Size(221, 25);
+            this.txtAppointmentId.TabIndex = 13;
+            // 
+            // btnAppointmentDelete
+            // 
+            this.btnAppointmentDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAppointmentDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnAppointmentDelete.Location = new System.Drawing.Point(880, 140);
+            this.btnAppointmentDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAppointmentDelete.Name = "btnAppointmentDelete";
+            this.btnAppointmentDelete.Size = new System.Drawing.Size(109, 52);
+            this.btnAppointmentDelete.TabIndex = 12;
+            this.btnAppointmentDelete.Text = "Delete";
+            this.btnAppointmentDelete.UseVisualStyleBackColor = false;
+            this.btnAppointmentDelete.Click += new System.EventHandler(this.btnAppointmentDelete_Click);
+            // 
+            // btnAppointmentUpdate
+            // 
+            this.btnAppointmentUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAppointmentUpdate.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnAppointmentUpdate.Location = new System.Drawing.Point(880, 57);
+            this.btnAppointmentUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAppointmentUpdate.Name = "btnAppointmentUpdate";
+            this.btnAppointmentUpdate.Size = new System.Drawing.Size(136, 50);
+            this.btnAppointmentUpdate.TabIndex = 11;
+            this.btnAppointmentUpdate.Text = "Update";
+            this.btnAppointmentUpdate.UseVisualStyleBackColor = false;
+            this.btnAppointmentUpdate.Click += new System.EventHandler(this.btnAppointmentUpdate_Click);
+            // 
+            // cbDoctorName
+            // 
+            this.cbDoctorName.FormattingEnabled = true;
+            this.cbDoctorName.Location = new System.Drawing.Point(577, 140);
+            this.cbDoctorName.Margin = new System.Windows.Forms.Padding(4);
+            this.cbDoctorName.Name = "cbDoctorName";
+            this.cbDoctorName.Size = new System.Drawing.Size(221, 25);
+            this.cbDoctorName.TabIndex = 10;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(17, 140);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(221, 25);
+            this.txtAge.TabIndex = 9;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(577, 57);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(221, 25);
+            this.txtName.TabIndex = 8;
+            // 
+            // txtAppointmentDate
+            // 
+            this.txtAppointmentDate.Location = new System.Drawing.Point(296, 57);
+            this.txtAppointmentDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAppointmentDate.Name = "txtAppointmentDate";
+            this.txtAppointmentDate.Size = new System.Drawing.Size(221, 25);
+            this.txtAppointmentDate.TabIndex = 7;
+            // 
             // ViewAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1024, 581);
             this.Controls.Add(this.panelAppointmentData);
             this.Controls.Add(this.panelAppointmentView);
+            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAppointment";
             this.Text = "ViewAppointment";
             this.panelAppointmentView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).EndInit();
             this.panelAppointmentData.ResumeLayout(false);
             this.panelAppointmentData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

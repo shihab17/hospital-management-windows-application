@@ -23,17 +23,29 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private void dgvPatient_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             panelBottomViewPatient.Visible = true;
+            txtPatientId.Enabled = false;
+            txtPatientDate.Enabled = false;
+            cbDoctorName.Enabled = false;
             string patientId = dgvPatient.SelectedRows[0].Cells[0].Value.ToString();
             string patientName = dgvPatient.SelectedRows[0].Cells[1].Value.ToString();
             string patientAge = dgvPatient.SelectedRows[0].Cells[2].Value.ToString();
-            string doctorName = dgvPatient.SelectedRows[0].Cells[3].Value.ToString();
-            string date = dgvPatient.SelectedRows[0].Cells[4].Value.ToString();
+            string patientGender = dgvPatient.SelectedRows[0].Cells[3].Value.ToString();
+            string doctorName = dgvPatient.SelectedRows[0].Cells[4].Value.ToString();
+            string date = dgvPatient.SelectedRows[0].Cells[5].Value.ToString();
 
             txtPatientId.Text = patientId;
             txtPatientName.Text = patientName;
             txtPatientAge.Text = patientAge;
             txtPatientDate.Text = date;
             cbDoctorName.SelectedValue = doctorName;
+            if (patientGender.Trim() == "Male")
+            {
+                rbMale.Checked = true;
+            }
+            else
+            {
+                rbFemale.Checked = true;
+            }
 
         }
 
@@ -42,10 +54,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
             int patientId = Int32.Parse(txtPatientId.Text) ;
             string patientName = txtPatientName.Text;
             int patientAge = Int32.Parse(txtPatientAge.Text);
+            string gender = (rbMale.Checked) ? "Male" : "Female";
             string doctorName = cbDoctorName.SelectedValue.ToString();
             string date = txtPatientDate.Text;
 
-            bool isPatientUpade = dataAccess.UpdatePatient(patientId,patientName,patientAge,doctorName);
+            bool isPatientUpade = dataAccess.UpdatePatient(patientId,patientName,patientAge,gender,doctorName);
             if (isPatientUpade)
             {
                 MessageBox.Show("Patient Update Succesfully");
