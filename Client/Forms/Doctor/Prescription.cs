@@ -14,10 +14,12 @@ namespace Hospital_Management_System.Client.Forms.Doctor
     {
         DataAccess dataAccess = new DataAccess();
         Patient patient;
-        public Prescription(Patient patient)
+        string doctor;
+        public Prescription(Patient patient, string doctor)
         {
             InitializeComponent();
             this.patient = patient;
+            this.doctor = doctor;
             GetPatient();
         }
         private void GetPatient()
@@ -42,7 +44,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         private void btnAddTest_Click(object sender, EventArgs e)
         {
             var testName = cbTestName.SelectedItem;
-            rtbPrescriptionTest.AppendText(testName + ",\n");
+            rtbPrescriptionTest.AppendText("\n" +testName + " ");
         }
 
         private void btnSavePrescription_Click(object sender, EventArgs e)
@@ -59,6 +61,32 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             {
                 MessageBox.Show("Something went wrong");
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            var doctorData = dataAccess.GetDoctorByUserId(doctor);
+            var userData = dataAccess.GetEmployeeByUserId(doctor);
+            e.Graphics.DrawString("Hospital Management System", new Font("Times New Roman", 30, FontStyle.Bold), Brushes.Black, new Point(Width/6, 10));
+            e.Graphics.DrawString(userData.FirstName +" "+ userData.LastName, new Font("Times New Roman", 18, FontStyle.Bold), Brushes.Black, new Point(30, 50));
+            e.Graphics.DrawString(doctorData.Specialty, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new Point(30, 75));
+            e.Graphics.DrawString(userData.Email, new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, new Point(30, 100));
+            e.Graphics.DrawString(userData.PhoneNumber, new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, new Point(30, 125));
+            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            e.Graphics.DrawLine(pen, 0, 150, Width, 150);
+            e.Graphics.DrawString("Patient Id: " + patient.patientId  +" Name: "  + patient.patientName + " (" + patient.patientGender + ") Age: " + patient.patientAge +" Date: " + patient.appointmentDate, new Font("Times New Roman", 20, FontStyle.Italic), Brushes.Black, new Point(30, 153));
+            e.Graphics.DrawLine(pen, 0, 185, Width, 185);
+            e.Graphics.DrawString(rtbPrescriptionTest.Text, new Font("Times New Roman", 20, FontStyle.Regular), Brushes.Black, new Point(30, 205));
+            e.Graphics.DrawLine(pen, (Width / 4) - 5, 185, (Width / 4) - 5, 950);
+            e.Graphics.DrawString(rtbPrescription.Text, new Font("Times New Roman", 20, FontStyle.Italic), Brushes.Black, new Point(Width/4, 205));
+            e.Graphics.DrawLine(pen, 0, 960, Width, 960);
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }

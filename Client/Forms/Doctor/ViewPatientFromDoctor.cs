@@ -87,7 +87,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         {
             string gender = (rbMale.Checked) ? "Male" : "Female";
             Patient patient = new Patient(txtAppointmentId.Text, txtName.Text, Int32.Parse(txtAge.Text), gender,txtAppointmentDate.Text); ;
-            Prescription prescription = new Prescription(patient);
+            Prescription prescription = new Prescription(patient, user.UserId);
             prescription.Show();
         }
 
@@ -95,7 +95,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         {
             string gender = (rbMale.Checked) ? "Male" : "Female";
             Patient patient = new Patient(txtAppointmentId.Text, txtName.Text, Int32.Parse(txtAge.Text), gender, txtAppointmentDate.Text); ;
-            PatientPrescription patientPrescription = new PatientPrescription(patient);
+            PatientPrescription patientPrescription = new PatientPrescription(patient, user.UserId);
             patientPrescription.Show(); 
         }
 

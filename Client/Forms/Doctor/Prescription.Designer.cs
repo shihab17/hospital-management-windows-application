@@ -29,6 +29,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescription));
             this.panelPrescriptionTop = new System.Windows.Forms.Panel();
             this.labelDate = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,7 +59,10 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             this.panelPrescriptionLeft = new System.Windows.Forms.Panel();
             this.rtbPrescriptionTest = new System.Windows.Forms.RichTextBox();
             this.panelPrescriptionBottom = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnSavePrescription = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelPrescriptionTop.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelPrescription.SuspendLayout();
@@ -356,16 +360,27 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             this.rtbPrescriptionTest.Name = "rtbPrescriptionTest";
             this.rtbPrescriptionTest.Size = new System.Drawing.Size(221, 305);
             this.rtbPrescriptionTest.TabIndex = 0;
-            this.rtbPrescriptionTest.Text = "";
+            this.rtbPrescriptionTest.Text = "C/C";
             // 
             // panelPrescriptionBottom
             // 
+            this.panelPrescriptionBottom.Controls.Add(this.btnPrint);
             this.panelPrescriptionBottom.Controls.Add(this.btnSavePrescription);
             this.panelPrescriptionBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPrescriptionBottom.Location = new System.Drawing.Point(0, 305);
             this.panelPrescriptionBottom.Name = "panelPrescriptionBottom";
             this.panelPrescriptionBottom.Size = new System.Drawing.Size(963, 57);
             this.panelPrescriptionBottom.TabIndex = 1;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(688, 19);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnSavePrescription
             // 
@@ -376,6 +391,20 @@ namespace Hospital_Management_System.Client.Forms.Doctor
             this.btnSavePrescription.Text = "Save";
             this.btnSavePrescription.UseVisualStyleBackColor = true;
             this.btnSavePrescription.Click += new System.EventHandler(this.btnSavePrescription_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Prescription
             // 
@@ -431,5 +460,8 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

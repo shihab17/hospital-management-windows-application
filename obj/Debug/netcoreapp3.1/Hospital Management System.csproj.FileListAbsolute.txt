@@ -25,7 +25,6 @@ G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win-x64\
 G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 G:\AIUB\HMS\Hospital Management System\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csprojAssemblyReference.cache
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Login.Login.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csproj.GenerateResource.cache
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.AssemblyInfoInputs.cache
@@ -57,3 +56,4 @@ G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Manageme
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Admin.AdminDashboard.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Doctor.ViewDoctorAllPatient.resources
 G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital_Management_System.Client.Forms.Receptionist.ViewAllDoctor.resources
+G:\AIUB\HMS\Hospital Management System\obj\Debug\netcoreapp3.1\Hospital Management System.csprojAssemblyReference.cache
