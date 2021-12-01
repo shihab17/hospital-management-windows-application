@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital Management System", "Hospital Management System.csproj", "{E30D4CDB-E6B5-48AB-834A-089783753D64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "Presentation.csproj", "{E30D4CDB-E6B5-48AB-834A-089783753D64}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\..\C# project\HMS\Setup\Setup.vdproj", "{3D4A04BE-DC39-466E-92A2-21D40AB90F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "..\Database\Database.csproj", "{F6694691-11C9-4CF1-BCE8-736CE0F7E3F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{E30D4CDB-E6B5-48AB-834A-089783753D64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D4A04BE-DC39-466E-92A2-21D40AB90F5E}.Debug|Any CPU.ActiveCfg = Debug
 		{3D4A04BE-DC39-466E-92A2-21D40AB90F5E}.Release|Any CPU.ActiveCfg = Release
+		{F6694691-11C9-4CF1-BCE8-736CE0F7E3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6694691-11C9-4CF1-BCE8-736CE0F7E3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6694691-11C9-4CF1-BCE8-736CE0F7E3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6694691-11C9-4CF1-BCE8-736CE0F7E3F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

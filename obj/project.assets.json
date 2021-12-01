@@ -130,6 +130,15 @@
             "rid": "win"
           }
         }
+      },
+      "Database/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Database.dll": {}
+        }
       }
     }
   },
@@ -446,10 +455,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Database/1.0.0": {
+      "type": "project",
+      "path": "../Database/Database.csproj",
+      "msbuildProject": "../Database/Database.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Database >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -460,9 +475,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj",
-      "projectName": "Hospital Management System",
-      "projectPath": "G:\\AIUB\\HMS\\Hospital Management System\\Hospital Management System.csproj",
+      "projectUniqueName": "G:\\AIUB\\HMS\\Hospital Management System\\Presentation.csproj",
+      "projectName": "Presentation",
+      "projectPath": "G:\\AIUB\\HMS\\Hospital Management System\\Presentation.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "G:\\AIUB\\HMS\\Hospital Management System\\obj\\",
       "projectStyle": "PackageReference",
@@ -484,7 +499,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\AIUB\\HMS\\Database\\Database.csproj": {
+              "projectPath": "G:\\AIUB\\HMS\\Database\\Database.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
