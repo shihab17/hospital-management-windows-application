@@ -30,6 +30,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private void InitializeComponent()
         {
             this.panelAdminLeft = new System.Windows.Forms.Panel();
+            this.btnManageRoom = new System.Windows.Forms.Button();
             this.btnManagePatient = new System.Windows.Forms.Button();
             this.panelEmpoyeSubMenu = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // panelAdminLeft
             // 
             this.panelAdminLeft.BackColor = System.Drawing.Color.Teal;
+            this.panelAdminLeft.Controls.Add(this.btnManageRoom);
             this.panelAdminLeft.Controls.Add(this.btnManagePatient);
             this.panelAdminLeft.Controls.Add(this.panelEmpoyeSubMenu);
             this.panelAdminLeft.Controls.Add(this.btnEmploye);
@@ -55,8 +57,25 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdminLeft.Location = new System.Drawing.Point(0, 50);
             this.panelAdminLeft.Name = "panelAdminLeft";
-            this.panelAdminLeft.Size = new System.Drawing.Size(200, 511);
+            this.panelAdminLeft.Size = new System.Drawing.Size(200, 567);
             this.panelAdminLeft.TabIndex = 0;
+            // 
+            // btnManageRoom
+            // 
+            this.btnManageRoom.AllowDrop = true;
+            this.btnManageRoom.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnManageRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnManageRoom.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnManageRoom.Location = new System.Drawing.Point(0, 182);
+            this.btnManageRoom.Name = "btnManageRoom";
+            this.btnManageRoom.Size = new System.Drawing.Size(200, 33);
+            this.btnManageRoom.TabIndex = 4;
+            this.btnManageRoom.Text = "Manage Room";
+            this.btnManageRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageRoom.UseVisualStyleBackColor = false;
+            this.btnManageRoom.Click += new System.EventHandler(this.btnManageRoom_Click);
             // 
             // btnManagePatient
             // 
@@ -93,9 +112,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 61);
+            this.button2.Location = new System.Drawing.Point(0, 60);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 28);
+            this.button2.Size = new System.Drawing.Size(200, 29);
             this.button2.TabIndex = 2;
             this.button2.Text = "Nurse";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,7 +125,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnReceptionist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnReceptionist.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReceptionist.ForeColor = System.Drawing.Color.White;
-            this.btnReceptionist.Location = new System.Drawing.Point(0, 32);
+            this.btnReceptionist.Location = new System.Drawing.Point(0, 31);
             this.btnReceptionist.Name = "btnReceptionist";
             this.btnReceptionist.Size = new System.Drawing.Size(200, 29);
             this.btnReceptionist.TabIndex = 1;
@@ -122,7 +141,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnDoctor.ForeColor = System.Drawing.Color.White;
             this.btnDoctor.Location = new System.Drawing.Point(0, 0);
             this.btnDoctor.Name = "btnDoctor";
-            this.btnDoctor.Size = new System.Drawing.Size(200, 32);
+            this.btnDoctor.Size = new System.Drawing.Size(200, 31);
             this.btnDoctor.TabIndex = 0;
             this.btnDoctor.Text = "Doctor";
             this.btnDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,12 +183,13 @@ namespace Hospital_Management_System.Client.Forms.Admin
             // 
             // panelAdminHeader
             // 
+            this.panelAdminHeader.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.panelAdminHeader.BackColor = System.Drawing.Color.Teal;
             this.panelAdminHeader.Controls.Add(this.btnLogout);
             this.panelAdminHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdminHeader.Location = new System.Drawing.Point(0, 0);
             this.panelAdminHeader.Name = "panelAdminHeader";
-            this.panelAdminHeader.Size = new System.Drawing.Size(984, 50);
+            this.panelAdminHeader.Size = new System.Drawing.Size(1004, 50);
             this.panelAdminHeader.TabIndex = 1;
             // 
             // btnLogout
@@ -178,7 +198,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnLogout.Location = new System.Drawing.Point(894, 0);
+            this.btnLogout.Location = new System.Drawing.Point(914, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(90, 50);
             this.btnLogout.TabIndex = 0;
@@ -192,17 +212,18 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAdminMain.ImeMode = System.Windows.Forms.ImeMode.On;
             this.panelAdminMain.Location = new System.Drawing.Point(200, 50);
             this.panelAdminMain.Name = "panelAdminMain";
-            this.panelAdminMain.Size = new System.Drawing.Size(784, 511);
+            this.panelAdminMain.Size = new System.Drawing.Size(804, 567);
             this.panelAdminMain.TabIndex = 2;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1004, 617);
             this.Controls.Add(this.panelAdminMain);
             this.Controls.Add(this.panelAdminLeft);
             this.Controls.Add(this.panelAdminHeader);
+            this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Admin";
             this.Text = "Admin";
             this.panelAdminLeft.ResumeLayout(false);
@@ -225,5 +246,6 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private System.Windows.Forms.Button btnManagePatient;
         private System.Windows.Forms.Button btnReceptionist;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnManageRoom;
     }
 }

@@ -15,7 +15,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public ManagePatient()
         {
             InitializeComponent();
-            int toatlPatient = dataAccess.GetTotalPatient();
+            int toatlPatient = dataAccess.patients.GetTotalPatient();
             labelTotalPatient.Text = toatlPatient.ToString();
         }
 

@@ -66,7 +66,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             var dutyTime = cbReceptionistDutyTime.SelectedItem;
             var salary = cbReceptionistSalary.SelectedItem;
 
-            bool isUpdate = dataAccess.UpdateUser(userId, firstName, lastName, gender, email, phoneNumber);
+            bool isUpdate = dataAccess.users.UpdateUser(userId, firstName, lastName, gender, email, phoneNumber);
             bool isReceptionistUpdate = dataAccess.UpdateReceptionist(userId, dutyTime.ToString(), salary.ToString());
             if (isUpdate && isReceptionistUpdate)
             {
@@ -84,8 +84,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnReceptionistDelete_Click(object sender, EventArgs e)
         {
-            bool isDeleteLogin = dataAccess.DeleteLogin(txtReceptionistUserId.Text);
-            bool isDeleteUser = dataAccess.DeleteUser(txtReceptionistUserId.Text);
+            bool isDeleteLogin = dataAccess.users.DeleteLogin(txtReceptionistUserId.Text);
+            bool isDeleteUser = dataAccess.employees.DeleteUser(txtReceptionistUserId.Text);
             bool isDeleteReceptionist = dataAccess.DeleteReceptionist(txtReceptionistUserId.Text);
             if (isDeleteLogin && isDeleteUser && isDeleteReceptionist)
             {

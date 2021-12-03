@@ -1,4 +1,5 @@
 ﻿using Hospital_Management_System.Client.Entities;
+using Hospital_Management_System.Forms.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,6 +79,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private void btnAdminDashboard_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AdminDashboard());
+        }
+
+        private void btnManageRoom_Click(object sender, EventArgs e)
+        {
+            new OpenChildForm(new ManageRoom(), panelAdminMain);
         }
     }
 }

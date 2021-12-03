@@ -15,8 +15,8 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
         public ViewAppointment()
         {
             InitializeComponent();
-            dataAccess.GetAllPatient(dgvAppointment);
-            dataAccess.GetDoctorCombo(cbDoctorName);
+            dataAccess.patients.GetAllPatient(dgvAppointment);
+            dataAccess.doctors.GetDoctorCombo(cbDoctorName);
             panelAppointmentData.Visible = false;
         }
 
@@ -57,11 +57,11 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             string doctorName = cbDoctorName.SelectedValue.ToString();
             string date = txtAppointmentDate.Text;
 
-            bool isPatientUpade = dataAccess.UpdatePatient(patientId, patientName, patientAge, gender, doctorName);
+            bool isPatientUpade = dataAccess.patients.UpdatePatient(patientId, patientName, patientAge, gender, doctorName);
             if (isPatientUpade)
             {
                 MessageBox.Show("Patient Update Succesfully");
-                dataAccess.GetAllPatient(dgvAppointment);
+                dataAccess.patients.GetAllPatient(dgvAppointment);
                 panelAppointmentData.Visible = false;
             }
             else
@@ -73,11 +73,11 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
         private void btnAppointmentDelete_Click(object sender, EventArgs e)
         {
             int patientId = Int32.Parse(txtAppointmentId.Text);
-            bool isDeletePatient = dataAccess.DeletePatient(patientId);
+            bool isDeletePatient = dataAccess.patients.DeletePatient(patientId);
             if (isDeletePatient)
             {
                 MessageBox.Show("Delete PAtient Succesfully");
-                dataAccess.GetAllPatient(dgvAppointment);
+                dataAccess.patients.GetAllPatient(dgvAppointment);
                 panelAppointmentData.Visible = false;
             }
             else

@@ -29,7 +29,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             txtRecetionistUserId.Text = userId;
             txtReceptionistPassword.Text = password;
             int role = (int)Users.UserTypeEnum.Receptionist;
-            bool isInsert = dataAccess.InsertEmployee(userId, password, role);
+            bool isInsert = dataAccess.users.InsertEmployee(userId, password, role);
             if (isInsert == true)
             {
                 panelEmployeeAdd.Enabled = false;
@@ -59,7 +59,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             phoneNumber = txtReceptionistPhoneNumber.Text;
             int userType = (int)Users.UserTypeEnum.Doctor;
 
-            bool isInsertUser = dataAccess.InsertUser(userId, firstName, lastName, gender, email, phoneNumber, userType);
+            bool isInsertUser = dataAccess.employees.InsertUser(userId, firstName, lastName, gender, email, phoneNumber, userType);
             if (isInsertUser)
             {
                 panelAddReceptionist.Visible = true;

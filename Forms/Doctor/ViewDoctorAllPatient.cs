@@ -23,7 +23,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
 
         private void ViewData()
         {
-            dataAccess.GetAllPatientByDoctorId(dgvAllPrient, user.UserId);
+            dataAccess.patients.GetAllPatientByDoctorId(dgvAllPrient, user.UserId);
         }
     }
 }

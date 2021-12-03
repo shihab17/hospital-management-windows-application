@@ -15,7 +15,7 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
         public ViewAllDoctor()
         {
             InitializeComponent();
-            dataAccess.GetAllDoctor(dgvDoctor);
+            dataAccess.doctors.GetAllDoctor(dgvDoctor);
         }
 
         private void dgvDoctor_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

@@ -16,7 +16,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public AddPatient()
         {
             InitializeComponent();
-            dataAccess.GetDoctorCombo(cbDoctor);
+            dataAccess.doctors.GetDoctorCombo(cbDoctor);
         }
 
         private void btnAddNewPatient_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             string gender = (rbMale.Checked) ? "Male" : "Female";
             string doctorId = cbDoctor.SelectedValue.ToString();
             var date = dtpAppoinment.Value.ToString("MM/dd/yyyy");
-            bool isIsertPatient = dataAccess.InsertPatient(patientName, patientAge, gender, doctorId, date);
+            bool isIsertPatient = dataAccess.patients.InsertPatient(patientName, patientAge, gender, doctorId, date);
             if (isIsertPatient)
             {
                 MessageBox.Show("Added New Patient");
@@ -44,7 +44,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             dt.Clear();
             dt.Columns.Clear();
             var date = dtpAppoinment.Value.DayOfWeek.ToString();
-            var users = dataAccess.GetDoctorDay(date);
+            var users = dataAccess.doctors.GetDoctorDay(date);
             string[] doctors = new string[] { "" };
             doctors = users.Split(',');
             cbDoctor.DataSource = dt;
@@ -53,7 +53,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             DataRow row = dt.NewRow();
             foreach (string doctor in doctors)
             {
-                string doctorName = dataAccess.GetDoctorName(doctor);
+                string doctorName = dataAccess.doctors.GetDoctorName(doctor);
                 row = dt.NewRow();
                 row["userId"] = doctor;
                 row["doctorName"] = doctorName;

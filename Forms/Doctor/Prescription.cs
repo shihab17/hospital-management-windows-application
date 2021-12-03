@@ -65,8 +65,8 @@ namespace Hospital_Management_System.Client.Forms.Doctor
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            var doctorData = dataAccess.GetDoctorByUserId(doctor);
-            var userData = dataAccess.GetEmployeeByUserId(doctor);
+            var doctorData = dataAccess.doctors.GetDoctorByUserId(doctor);
+            var userData = dataAccess.employees.GetEmployeeByUserId(doctor);
             e.Graphics.DrawString("Hospital Management System", new Font("Times New Roman", 30, FontStyle.Bold), Brushes.Black, new Point(Width/6, 10));
             e.Graphics.DrawString(userData.FirstName +" "+ userData.LastName, new Font("Times New Roman", 18, FontStyle.Bold), Brushes.Black, new Point(30, 50));
             e.Graphics.DrawString(doctorData.Specialty, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new Point(30, 75));

@@ -15,9 +15,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public AdminDashboard()
         {
             InitializeComponent();
-            int totalDoctor = dataAccess.GetTotalDoctor();
-            int totalPatient = dataAccess.GetTotalPatient();
-            int totalEmployee = dataAccess.GetTotalEmployee();
+            int totalDoctor = dataAccess.doctors.GetTotalDoctor();
+            int totalPatient = dataAccess.patients.GetTotalPatient();
+            int totalEmployee = dataAccess.employees.GetTotalEmployee();
             labelTotalDoctor.Text = totalDoctor.ToString(); 
             labelTotalPatient.Text = totalPatient.ToString();
             labelTotalEmployee.Text = totalEmployee.ToString();

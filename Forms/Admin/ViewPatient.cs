@@ -15,8 +15,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public ViewPatient()
         {
             InitializeComponent();
-            dataAccess.GetAllPatient(dgvPatient);
-            dataAccess.GetDoctorCombo(cbDoctorName);
+            dataAccess.patients.GetAllPatient(dgvPatient);
+            dataAccess.doctors.GetDoctorCombo(cbDoctorName);
             panelBottomViewPatient.Visible = false;
         }
 
@@ -58,11 +58,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
             string doctorName = cbDoctorName.SelectedValue.ToString();
             string date = txtPatientDate.Text;
 
-            bool isPatientUpade = dataAccess.UpdatePatient(patientId,patientName,patientAge,gender,doctorName);
+            bool isPatientUpade = dataAccess.patients.UpdatePatient(patientId,patientName,patientAge,gender,doctorName);
             if (isPatientUpade)
             {
                 MessageBox.Show("Patient Update Succesfully");
-                dataAccess.GetAllPatient(dgvPatient);
+                dataAccess.patients.GetAllPatient(dgvPatient);
                 panelBottomViewPatient.Visible = false;
             }
             else
@@ -74,11 +74,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private void btnPatientDelete_Click(object sender, EventArgs e)
         {
             int patientId = Int32.Parse(txtPatientId.Text);
-            bool isDeletePatient = dataAccess.DeletePatient(patientId);
+            bool isDeletePatient = dataAccess.patients.DeletePatient(patientId);
             if (isDeletePatient)
             {
                 MessageBox.Show("Delete PAtient Succesfully");
-                dataAccess.GetAllPatient(dgvPatient);
+                dataAccess.patients.GetAllPatient(dgvPatient);
                 panelBottomViewPatient.Visible = false;
             }
             else

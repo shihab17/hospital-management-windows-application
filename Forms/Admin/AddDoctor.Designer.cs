@@ -29,6 +29,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelUser = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -65,6 +66,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbDoctorSpeciality = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panelUser.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,10 +75,12 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelRight.SuspendLayout();
             this.panelDoctor.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
+            this.panelLeft.AutoScroll = true;
             this.panelLeft.BackColor = System.Drawing.SystemColors.Control;
             this.panelLeft.Controls.Add(this.panelUser);
             this.panelLeft.Controls.Add(this.panelAddEmplyee);
@@ -84,7 +89,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelLeft.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(431, 493);
+            this.panelLeft.Size = new System.Drawing.Size(453, 485);
             this.panelLeft.TabIndex = 16;
             // 
             // panelUser
@@ -104,7 +109,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelUser.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelUser.Location = new System.Drawing.Point(0, 100);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(431, 224);
+            this.panelUser.Size = new System.Drawing.Size(453, 224);
             this.panelUser.TabIndex = 18;
             // 
             // groupBox1
@@ -154,6 +159,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtDocotorFirstName.Name = "txtDocotorFirstName";
             this.txtDocotorFirstName.Size = new System.Drawing.Size(226, 25);
             this.txtDocotorFirstName.TabIndex = 17;
+            this.txtDocotorFirstName.TextChanged += new System.EventHandler(this.txtDocotorFirstName_TextChanged);
+            this.txtDocotorFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtDocotorFirstName_Validating);
             // 
             // label2
             // 
@@ -170,6 +177,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtDoctorLastName.Name = "txtDoctorLastName";
             this.txtDoctorLastName.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorLastName.TabIndex = 19;
+            this.txtDoctorLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorLastName_Validating);
             // 
             // txtDoctorPhoneNumber
             // 
@@ -177,6 +185,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtDoctorPhoneNumber.Name = "txtDoctorPhoneNumber";
             this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorPhoneNumber.TabIndex = 24;
+            this.txtDoctorPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorPhoneNumber_Validating);
             // 
             // label6
             // 
@@ -202,6 +211,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtDoctorEmail.Name = "txtDoctorEmail";
             this.txtDoctorEmail.Size = new System.Drawing.Size(226, 25);
             this.txtDoctorEmail.TabIndex = 22;
+            this.txtDoctorEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorEmail_Validating);
             // 
             // label5
             // 
@@ -224,7 +234,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelAddEmplyee.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelAddEmplyee.Location = new System.Drawing.Point(0, 0);
             this.panelAddEmplyee.Name = "panelAddEmplyee";
-            this.panelAddEmplyee.Size = new System.Drawing.Size(431, 100);
+            this.panelAddEmplyee.Size = new System.Drawing.Size(453, 100);
             this.panelAddEmplyee.TabIndex = 17;
             // 
             // btnAddEmployee
@@ -288,11 +298,11 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelRight.BackColor = System.Drawing.SystemColors.Control;
             this.panelRight.Controls.Add(this.btnAddNewDoctor);
             this.panelRight.Controls.Add(this.panelDoctor);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelRight.Location = new System.Drawing.Point(431, 0);
+            this.panelRight.Location = new System.Drawing.Point(459, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(621, 493);
+            this.panelRight.Size = new System.Drawing.Size(593, 485);
             this.panelRight.TabIndex = 17;
             // 
             // btnAddNewDoctor
@@ -321,7 +331,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelDoctor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDoctor.Location = new System.Drawing.Point(0, 0);
             this.panelDoctor.Name = "panelDoctor";
-            this.panelDoctor.Size = new System.Drawing.Size(621, 324);
+            this.panelDoctor.Size = new System.Drawing.Size(593, 324);
             this.panelDoctor.TabIndex = 2;
             // 
             // groupBox2
@@ -373,6 +383,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.cbDoctorSchedule.Name = "cbDoctorSchedule";
             this.cbDoctorSchedule.Size = new System.Drawing.Size(121, 25);
             this.cbDoctorSchedule.TabIndex = 5;
+            this.cbDoctorSchedule.SelectedIndexChanged += new System.EventHandler(this.cbDoctorSchedule_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -415,6 +426,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.txtDocotrFees.Name = "txtDocotrFees";
             this.txtDocotrFees.Size = new System.Drawing.Size(208, 25);
             this.txtDocotrFees.TabIndex = 9;
+            this.txtDocotrFees.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocotrFees_KeyPress);
             // 
             // label12
             // 
@@ -461,11 +473,26 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.cbDoctorSpeciality.Size = new System.Drawing.Size(208, 25);
             this.cbDoctorSpeciality.TabIndex = 0;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(453, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(6, 485);
+            this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 493);
+            this.ClientSize = new System.Drawing.Size(1052, 485);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -484,6 +511,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
             this.panelDoctor.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,5 +554,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -24,8 +24,8 @@ namespace Hospital_Management_System.Client.Forms.Doctor
 
         private void ShowData()
         {
-           Employee employee = dataAccess.GetEmployeeByUserId(userId);
-           Doctors doctors = dataAccess.GetDoctorByUserId(userId);
+           Employee employee = dataAccess.employees.GetEmployeeByUserId(userId);
+           Entities.Doctor doctors = dataAccess.doctors.GetDoctorByUserId(userId);
             labelDoctorName.Text = employee.FirstName + " " + employee.LastName;
             labelSpeciality.Text = doctors.Specialty;
             labelSchedeule.Text = doctors.ScheduleDay + " (" + doctors.ScheduleTime + ")";

@@ -20,7 +20,7 @@ namespace Hospital_Management_System.Client.Forms.Admin
         }
         public void DoctorView()
         {
-            dataAccess.GetAllDoctor(dgvDoctor);
+            dataAccess.doctors.GetAllDoctor(dgvDoctor);
             panelData.Visible = false;
         }
 
@@ -90,8 +90,8 @@ namespace Hospital_Management_System.Client.Forms.Admin
             var roomNo = Int32.Parse(cbDoctorRoom.SelectedItem.ToString());
             var fees = Int32.Parse(txtDocotorfees.Text);
 
-            bool isUpdate = dataAccess.UpdateUser(userId, firstName, lastName, gender, email, phoneNumber);
-            bool isDoctorUpdate = dataAccess.UpdateDoctor(userId, speciality.ToString(), docotorDay, docotorTime.ToString(), roomNo, fees);
+            bool isUpdate = dataAccess.users.UpdateUser(userId, firstName, lastName, gender, email, phoneNumber);
+            bool isDoctorUpdate = dataAccess.doctors.UpdateDoctor(userId, speciality.ToString(), docotorDay, docotorTime.ToString(), roomNo, fees);
             if (isUpdate && isDoctorUpdate)
             {
                 MessageBox.Show("Update Succesfully");
@@ -125,9 +125,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
 
         private void btnDoctorDelete_Click(object sender, EventArgs e)
         {
-            bool isDeleteLogin = dataAccess.DeleteLogin(txtDoctorUserId.Text);
-            bool isDeleteUser = dataAccess.DeleteUser(txtDoctorUserId.Text);
-            bool isDeleteDoctor = dataAccess.DeleteDoctor(txtDoctorUserId.Text);
+            bool isDeleteLogin = dataAccess.users.DeleteLogin(txtDoctorUserId.Text);
+            bool isDeleteUser = dataAccess.employees.DeleteUser(txtDoctorUserId.Text);
+            bool isDeleteDoctor = dataAccess.doctors.DeleteDoctor(txtDoctorUserId.Text);
             if (isDeleteLogin && isDeleteUser && isDeleteDoctor)
             {
                 MessageBox.Show("User Update Succesfully");

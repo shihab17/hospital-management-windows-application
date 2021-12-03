@@ -23,7 +23,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         private void ViewData()
         {
             var dateTmime = dateTimePicker1.Value.ToString("MM/dd/yyyy");
-            dataAccess.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId,dateTmime);
+            dataAccess.patients.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId,dateTmime);
             panelDoctorPAtientData.Visible = false;
             //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             //dgvDoctorsPatient.Columns.Add(btn);
@@ -102,7 +102,7 @@ namespace Hospital_Management_System.Client.Forms.Doctor
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             var dateTmime = dateTimePicker1.Value.ToString("MM/dd/yyyy");
-            dataAccess.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId, dateTmime);
+            dataAccess.patients.GetPatientByDoctorId(dgvDoctorsPatient, user.UserId, dateTmime);
             panelDoctorPAtientData.Visible = false;
         }
     }

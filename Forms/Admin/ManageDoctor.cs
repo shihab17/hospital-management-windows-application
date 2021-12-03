@@ -15,9 +15,9 @@ namespace Hospital_Management_System.Client.Forms.Admin
         public ManageDoctor()
         {
             InitializeComponent();
-            int totalSurgeon = dataAccess.GetTotalDeptByDptName("Surgeon");
-            int totalDutyDoctor = dataAccess.GetTotalDeptByDptName("Duty doctor");
-            int totalDentist = dataAccess.GetTotalDeptByDptName("Dentist");
+            int totalSurgeon = dataAccess.doctors.GetTotalDeptByDptName("Surgeon");
+            int totalDutyDoctor = dataAccess.doctors.GetTotalDeptByDptName("Duty doctor");
+            int totalDentist = dataAccess.doctors.GetTotalDeptByDptName("Dentist");
 
             labelSurgeon.Text = totalSurgeon.ToString();
             labelDentist.Text = totalDentist.ToString();

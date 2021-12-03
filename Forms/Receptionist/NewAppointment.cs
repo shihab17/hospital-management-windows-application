@@ -25,7 +25,7 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             string gender = (rbMale.Checked) ? "Male" : "Female";
             var doctorId = cbDoctor.SelectedValue.ToString();
             var appointmentDate = dtpAppoinment.Value.ToString("MM/dd/yyyy");
-            bool isIsertPatient = dataAccess.InsertPatient(name, age, gender, doctorId, appointmentDate);
+            bool isIsertPatient = dataAccess.patients.InsertPatient(name, age, gender, doctorId, appointmentDate);
             if (isIsertPatient)
             {
                 MessageBox.Show("Added New Doctor Appointment");
@@ -43,7 +43,7 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             dt.Clear();
             dt.Columns.Clear();
             var date = dtpAppoinment.Value.DayOfWeek.ToString();
-            var users = dataAccess.GetDoctorDay(date);
+            var users = dataAccess.doctors.GetDoctorDay(date);
             string[] doctors = new string[] { "" };
             doctors = users.Split(',');
             cbDoctor.DataSource = dt;
@@ -52,7 +52,7 @@ namespace Hospital_Management_System.Client.Forms.Receptionist
             DataRow row = dt.NewRow();
             foreach (string doctor in doctors)
             {
-                string doctorName = dataAccess.GetDoctorName(doctor);
+                string doctorName = dataAccess.doctors.GetDoctorName(doctor);
                 row = dt.NewRow();
                 row["userId"] = doctor;
                 row["doctorName"] = doctorName;

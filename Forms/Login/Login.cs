@@ -22,7 +22,7 @@ namespace Hospital_Management_System.Client.Forms.Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataAccess dataAccess = new DataAccess();
-            var (userId,password,isAccess) = dataAccess.LoginAccess(txtUserId.Text, txtPassword.Text);
+            var (userId,password,isAccess) = dataAccess.users.LoginAccess(txtUserId.Text, txtPassword.Text);
             if (isAccess>-1)
             {
                 Users user = new Users(userId,password,isAccess);
